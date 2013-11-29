@@ -1,4 +1,7 @@
 Salao::Application.routes.draw do
+  resources :realizas
+
+
   resources :servicos
 
 
