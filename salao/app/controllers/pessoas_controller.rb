@@ -1,5 +1,5 @@
 class PessoasController < ApplicationController
-  before_filter :authenticate_usuario!
+  #before_filter :authenticate_usuario!
 
   # GET /pessoas
   # GET /pessoas.json
