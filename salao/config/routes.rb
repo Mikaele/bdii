@@ -5,7 +5,7 @@ Salao::Application.routes.draw do
   resources :servicos
 
 
-  resources :categoria
+  resources :categorias
 
 
   resources :clientes

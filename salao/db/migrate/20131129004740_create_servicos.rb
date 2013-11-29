@@ -1,7 +1,7 @@
 class CreateServicos < ActiveRecord::Migration
   def change
     create_table :servicos do |t|
-      t.references :categoria
+      t.references :categorias
       t.string :nome
       t.float :preco
       t.text :descricao
