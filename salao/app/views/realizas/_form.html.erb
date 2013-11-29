@@ -1,0 +1,45 @@
+<%= form_for(@realiza) do |f| %>
+  <% if @realiza.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@realiza.errors.count, "error") %> prohibited this realiza from being saved:</h2>
+
+      <ul>
+      <% @realiza.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :data %><br />
+    <%= f.date_select :data %>
+  </div>
+  <div class="field">
+    <%= f.label :hora %><br />
+    <%= f.time_select :hora %>
+  </div>
+  <div class="field">
+    <%= f.label :satatus %><br />
+    <%= f.text_field :satatus %>
+  </div>
+  <div class="field">
+    <%= f.label :obs %><br />
+    <%= f.text_field :obs %>
+  </div>
+  <div class="field">
+    <%= f.label :cliente %><br />
+    <%= f.text_field :cliente %>
+  </div>
+  <div class="field">
+    <%= f.label :usuario %><br />
+    <%= f.text_field :usuario %>
+  </div>
+  <div class="field">
+    <%= f.label :servico %><br />
+    <%= f.text_field :servico %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
