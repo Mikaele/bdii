@@ -11,9 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131129004740) do
+ActiveRecord::Schema.define(:version => 20131129223806) do
 
-  create_table "categorias", :force => true do |t|
+  create_table "categories", :force => true do |t|
     t.string   "nome"
     t.text     "descricao"
     t.datetime "created_at", :null => false
@@ -40,16 +40,32 @@ ActiveRecord::Schema.define(:version => 20131129004740) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "realizas", :force => true do |t|
+    t.date     "data"
+    t.time     "hora"
+    t.boolean  "satatus"
+    t.string   "obs"
+    t.integer  "cliente_id"
+    t.integer  "usuario_id"
+    t.integer  "servico_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "realizas", ["cliente_id"], :name => "index_realizas_on_cliente_id"
+  add_index "realizas", ["servico_id"], :name => "index_realizas_on_servico_id"
+  add_index "realizas", ["usuario_id"], :name => "index_realizas_on_usuario_id"
+
   create_table "servicos", :force => true do |t|
-    t.integer  "categoria_id"
+    t.integer  "category_id"
     t.string   "nome"
     t.float    "preco"
     t.text     "descricao"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
-  add_index "servicos", ["categoria_id"], :name => "index_servicos_on_categoria_id"
+  add_index "servicos", ["category_id"], :name => "index_servicos_on_category_id"
 
   create_table "usuarios", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

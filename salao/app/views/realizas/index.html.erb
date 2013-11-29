@@ -20,9 +20,9 @@
     <td><%= realiza.hora %></td>
     <td><%= realiza.satatus %></td>
     <td><%= realiza.obs %></td>
-    <td><%= realiza.cliente %></td>
-    <td><%= realiza.usuario %></td>
-    <td><%= realiza.servico %></td>
+    <td><%= realiza.cliente.pessoa.nome %></td>
+    <td><%= realiza.usuario.nome %></td>
+    <td><%= realiza.servico.nome %></td>
     <td><%= link_to 'Show', realiza %></td>
     <td><%= link_to 'Edit', edit_realiza_path(realiza) %></td>
     <td><%= link_to 'Destroy', realiza, method: :delete, data: { confirm: 'Are you sure?' } %></td>
