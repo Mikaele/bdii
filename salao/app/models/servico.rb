@@ -1,3 +1,4 @@
 class Servico < ActiveRecord::Base
-  attr_accessible :descricao, :nome
+  belongs_to :categoria
+  attr_accessible :descricao, :nome, :preco
 end

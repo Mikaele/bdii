@@ -1,8 +1,11 @@
 Salao::Application.routes.draw do
-  resources :clientes
-
-
   resources :servicos
+
+
+  resources :categoria
+
+
+  resources :clientes
 
 
   resources :pessoas

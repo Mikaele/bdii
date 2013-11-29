@@ -2,7 +2,9 @@
 
 <table>
   <tr>
+    <th>Categoria</th>
     <th>Nome</th>
+    <th>Preco</th>
     <th>Descricao</th>
     <th></th>
     <th></th>
@@ -11,7 +13,9 @@
 
 <% @servicos.each do |servico| %>
   <tr>
+    <td><%= servico.categoria %></td>
     <td><%= servico.nome %></td>
+    <td><%= servico.preco %></td>
     <td><%= servico.descricao %></td>
     <td><%= link_to 'Show', servico %></td>
     <td><%= link_to 'Edit', edit_servico_path(servico) %></td>
