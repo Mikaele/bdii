@@ -1,17 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Nome:</b>
+<h1 class="text-center">
   <%= @pessoa.nome %>
-</p>
+</h1>
 
-<p>
-  <b>Apelido:</b>
+<p class="text-center">
   <%= @pessoa.apelido %>
 </p>
 
 <p>
-  <b>Endereco:</b>
+  <b>Endereço:</b>
   <%= @pessoa.endereco %>
 </p>
 
@@ -31,5 +29,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_pessoa_path(@pessoa) %> |
-<%= link_to 'Back', pessoas_path %>
+<%= link_to 'Editar', edit_pessoa_path(@pessoa), class: "btn btn-warning" %> |
+<%= link_to 'Voltar', pessoas_path, class: "btn btn-inverse" %>

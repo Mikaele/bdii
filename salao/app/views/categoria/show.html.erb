@@ -1,15 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Nome:</b>
+<h1 class="text-center">
   <%= @categorium.nome %>
-</p>
+</h1>
 
-<p>
-  <b>Descricao:</b>
+<p class="text-center">
   <%= @categorium.descricao %>
 </p>
 
 
-<%= link_to 'Edit', edit_categorium_path(@categorium) %> |
-<%= link_to 'Back', categoria_path %>
+<%= link_to 'Editar', edit_categorium_path(@categorium), class: "btn btn-warning" %> |
+<%= link_to 'Voltar', categoria_path, class: "btn btn-inverse" %>

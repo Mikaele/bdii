@@ -1,6 +1,9 @@
-<h1>Listing pessoas</h1>
+<h1 class="text-center">Lista de Pessoas</h1>
 
-<table class="table">
+<%=link_to 'Nova Pessoa', new_pessoa_path, class:"btn"%>
+
+<table class="table table-strippeds">
+  <thead>
   <tr>
     <th>Nome</th>
     <th>Apelido</th>
@@ -12,8 +15,10 @@
     <th></th>
     <th></th>
   </tr>
+  <thead>
 
-<% @pessoas.each do |pessoa| %>
+
+  <% @pessoas.each do |pessoa| %>
   <tr>
     <td><%= pessoa.nome %></td>
     <td><%= pessoa.apelido %></td>
@@ -21,13 +26,13 @@
     <td><%= pessoa.celular %></td>
     <td><%= pessoa.telefone %></td>
     <td><%= pessoa.email %></td>
-    <td><%= link_to 'Show', pessoa %></td>
-    <td><%= link_to 'Edit', edit_pessoa_path(pessoa) %></td>
-    <td><%= link_to 'Destroy', pessoa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%=link_to 'Mostrar', pessoa, class: "btn btn-info" %></td>
+    <td><%=link_to 'Editar', edit_pessoa_path(pessoa), class: "btn btn-warning" %></td>
+    <td><%=link_to 'Deletar', pessoa, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Pessoa', new_pessoa_path %>
+
