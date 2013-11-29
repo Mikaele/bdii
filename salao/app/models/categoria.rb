@@ -1,3 +1,3 @@
-class Categorium < ActiveRecord::Base
+class Categoria < ActiveRecord::Base
   attr_accessible :descricao, :nome
 end

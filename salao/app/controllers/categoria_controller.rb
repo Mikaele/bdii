@@ -2,7 +2,7 @@ class CategoriaController < ApplicationController
   # GET /categoria
   # GET /categoria.json
   def index
-    @categoria = Categorium.all
+    @categoria = Categoria.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class CategoriaController < ApplicationController
   # GET /categoria/1
   # GET /categoria/1.json
   def show
-    @categorium = Categorium.find(params[:id])
+    @categorium = Categoria.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class CategoriaController < ApplicationController
   # GET /categoria/new
   # GET /categoria/new.json
   def new
-    @categorium = Categorium.new
+    @categorium = Categoria.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,17 +34,17 @@ class CategoriaController < ApplicationController
 
   # GET /categoria/1/edit
   def edit
-    @categorium = Categorium.find(params[:id])
+    @categorium = Categoria.find(params[:id])
   end
 
   # POST /categoria
   # POST /categoria.json
   def create
-    @categorium = Categorium.new(params[:categorium])
+    @categorium = Categoria.new(params[:categorium])
 
     respond_to do |format|
       if @categorium.save
-        format.html { redirect_to @categorium, notice: 'Categorium was successfully created.' }
+        format.html { redirect_to @categorium, notice: 'Categoria was successfully created.' }
         format.json { render json: @categorium, status: :created, location: @categorium }
       else
         format.html { render action: "new" }
@@ -56,11 +56,11 @@ class CategoriaController < ApplicationController
   # PUT /categoria/1
   # PUT /categoria/1.json
   def update
-    @categorium = Categorium.find(params[:id])
+    @categorium = Categoria.find(params[:id])
 
     respond_to do |format|
       if @categorium.update_attributes(params[:categorium])
-        format.html { redirect_to @categorium, notice: 'Categorium was successfully updated.' }
+        format.html { redirect_to @categorium, notice: 'Categoria was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -72,7 +72,7 @@ class CategoriaController < ApplicationController
   # DELETE /categoria/1
   # DELETE /categoria/1.json
   def destroy
-    @categorium = Categorium.find(params[:id])
+    @categorium = Categoria.find(params[:id])
     @categorium.destroy
 
     respond_to do |format|
