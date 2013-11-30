@@ -25,10 +25,13 @@ class RealizasController < ApplicationController
   # GET /realizas/new.json
   def new
     @realiza = Realiza.new
+    @pessoas=Pessoa.where("id in (?)",Cliente.select("pessoa_id as id").map(&:id))
+    @funcionarios=Pessoa.where("id in (?)",Usuario.select("pessoa_id as id").map(&:id))
+    @servicos=Servico.all
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @realiza }
+      format.json { render json: @realiza  and @pessoas  and @funcionarios and @servicos}
     end
   end
 

@@ -11,35 +11,37 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field span12">
     <%= f.label :data %><br />
     <%= f.date_select :data %>
   </div>
-  <div class="field">
+  <div class="field span6">
     <%= f.label :hora %><br />
     <%= f.time_select :hora %>
   </div>
-  <div class="field">
+  <div class="field span3">
     <%= f.label :satatus %><br />
     <%= f.text_field :satatus %>
   </div>
-  <div class="field">
+  <div class="field span4">
     <%= f.label :obs %><br />
-    <%= f.text_field :obs %>
+    <%= f.text_area :obs,:rows=>"10" %>
   </div>
-  <div class="field">
+  <div class="field span5">
     <%= f.label :cliente_id %><br />
-    <%= f.text_field :cliente_id %>
+    <%= f.collection_select(:cliente_id,@pessoas,:id,:nome) %>
   </div>
-  <div class="field">
-    <%= f.label :usuario_id %><br />
-    <%= f.text_field :usuario_id %>
+  <div class="field span5">
+    <%= f.label :usuario_id ,"Profissional" %><br />
+    <%= f.collection_select(:usuario_id,@funcionarios,:id,:nome) %>
+
   </div>
-  <div class="field">
+  <div class="field span5">
     <%= f.label :servico_id %><br />
-    <%= f.text_field :servico_id %>
+    <%= f.collection_select(:servico_id,@servicos,:id,:nome) %>
+
   </div>
-  <div class="actions">
+  <div class="actions span9">
     <%= f.submit %>
   </div>
 <% end %>

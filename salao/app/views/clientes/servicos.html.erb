@@ -1,13 +1,13 @@
 <h1>A(o) cliente <b><%= @cliente.pessoa.nome %></b> realizou os servocos abaixo:</h1>
-
+  <%@valor =0%>
 <table class="table">
   <tr>
     <th>Data</th>
     <th>Hora</th>
     <th>Satatus</th>
     <th>Obs</th>
-    <th>Cliente</th>
     <th>Servico</th>
+    <th>Preco</th>
   </tr>
 
 <% @servicos.each do |realiza| %>
@@ -16,12 +16,11 @@
     <td><%= realiza.hora %></td>
     <td><%= realiza.satatus %></td>
     <td><%= realiza.obs %></td>
-    <td><%= realiza.usuario.nome %></td>
     <td><%= realiza.servico.nome %></td>
+    <td><%= realiza.servico.preco %></td>
+    <%@valor=@valor+realiza.servico.preco %>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Realiza', new_realiza_path %>
+<hr>
+<p><b>Total consumo: <%=@valor%></b></p>
