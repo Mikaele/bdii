@@ -13,7 +13,7 @@
 
 <% @servicos.each do |servico| %>
   <tr>
-    <td><%= servico.categoria %></td>
+    <td><%= servico.category.nome %></td>
     <td><%= servico.nome %></td>
     <td><%= servico.preco %></td>
     <td><%= servico.descricao %></td>
