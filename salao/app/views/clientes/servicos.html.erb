@@ -1,4 +1,4 @@
-<h1>Listing realizas</h1>
+<h1>A(o) cliente <b><%= @cliente.pessoa.nome %></b> realizou os servocos abaixo:</h1>
 
 <table class="table">
   <tr>
@@ -7,25 +7,17 @@
     <th>Satatus</th>
     <th>Obs</th>
     <th>Cliente</th>
-    <th>Usuario</th>
     <th>Servico</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
-<% @realizas.each do |realiza| %>
+<% @servicos.each do |realiza| %>
   <tr>
     <td><%= realiza.data %></td>
     <td><%= realiza.hora %></td>
     <td><%= realiza.satatus %></td>
     <td><%= realiza.obs %></td>
-    <td><a href="/cliente/servico/<%=realiza.cliente.id%>"><%= realiza.cliente.pessoa.nome %></a></td>
     <td><%= realiza.usuario.nome %></td>
     <td><%= realiza.servico.nome %></td>
-    <td><%= link_to 'Show', realiza %></td>
-    <td><%= link_to 'Edit', edit_realiza_path(realiza) %></td>
-    <td><%= link_to 'Destroy', realiza, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

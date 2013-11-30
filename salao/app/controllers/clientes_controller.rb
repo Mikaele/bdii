@@ -84,4 +84,9 @@ class ClientesController < ApplicationController
   def aniversariante
     @clientes=Cliente.where("aniversario like '%_-#{Date.today.month}-_%'")
   end
+
+  def servicos
+    @cliente = Cliente.find(params[:id])
+    @servicos=Realiza.where(:cliente_id=>@cliente.id)
+  end
 end
