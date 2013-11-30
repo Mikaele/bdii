@@ -1,0 +1,47 @@
+<%= form_for(@servico) do |f| %>
+  <% if @servico.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@servico.errors.count, "error") %> prohibited this servico from being saved:</h2>
+
+      <ul>
+      <% @servico.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <form class="form-horizontal">
+
+    <div class="control-group">
+        <%= f.label :nome, class:"control-label" %>
+        <div class="controls">
+            <%= f.text_field :nome, class:"input-xlarge" %>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <%= f.label :categoria, class:"control-label" %>
+        <div class="controls">
+          <%= f.select :categoria_id, @categorias.collect { |a| [ a.nome, a.id ] }  %>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <%= f.label :preco, class:"control-label" %>
+        <div class="controls input-prepend">
+            <span class="add-on">R$</span>
+            <%= f.text_field :preco, class:"input-mini" %>
+        </div>
+    </div>
+
+    <div class="control-group">
+        <%= f.label :descricao, class:"control-label" %>
+        <div class="controls">
+            <%= f.text_field :descricao, class:"input-xxlarge" %>
+        </div>
+    </div>
+
+    <button class="btn btn-success" type="submit">Salvar</button>
+  </form>
+<% end %>

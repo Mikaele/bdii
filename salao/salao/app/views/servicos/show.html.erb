@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class="text-center">
+  <%= @servico.nome %>
+</h1>
+
+<p class="text-center">
+  <%= @servico.categoria_id %>
+</p>
+
+<p>
+  <b>Preço:</b>
+  <%= @servico.preco %>
+</p>
+
+<p>
+  <b>Descrição:</b>
+  <%= @servico.descricao %>
+</p>
+
+
+<%= link_to 'Editar', edit_servico_path(@servico), class: "btn btn-warning" %> |
+<%= link_to 'Voltar', servicos_path, class: "btn btn-inverse" %>
