@@ -23,6 +23,7 @@ Salao::Application.routes.draw do
   end
 
   match "/" ,:controller=>"pessoas" ,:action=>"index"
+  match "/cadastrar_cliente/passo1", :controller=>"index"  , :action=>"cadastrar_cliente"
 
 
   # The priority is based upon order of creation:
