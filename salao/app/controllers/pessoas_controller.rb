@@ -46,7 +46,7 @@ class PessoasController < ApplicationController
 
     respond_to do |format|
       if @pessoa.save
-        format.html { redirect_to @pessoa, notice: 'Pessoa was successfully created.' }
+        format.html { redirect_to "/cadastrar_cliente/passo2/"+@pessoa.id.to_s }
         format.json { render json: @pessoa, status: :created, location: @pessoa }
       else
         format.html { render action: "new" }

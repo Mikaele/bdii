@@ -10,11 +10,14 @@
       </ul>
     </div>
   <% end %>
-
+  <% if params[:id] %>
+        <%= f.text_field :pessoa_id, :value=>params[:id] %>
+  <% else %>
   <div class="field">
     <%= f.label :pessoa_id, "Codigo de Pessoa" %><br />
     <%= f.text_field :pessoa_id %>
   </div>
+ <%end%>
   <div class="field">
     <%= f.label :aniversario %><br />
     <%= f.date_select :aniversario %>

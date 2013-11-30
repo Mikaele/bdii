@@ -13,7 +13,7 @@
 
 <% @clientes.each do |cliente| %>
   <tr>
-    <td><%= cliente.references %></td>
+    <td><%= cliente.pessoa.nome %></td>
     <td><%= cliente.aniversario %></td>
     <td><%= cliente.sexo %></td>
     <td><%= cliente.obs %></td>
