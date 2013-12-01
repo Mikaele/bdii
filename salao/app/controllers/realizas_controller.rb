@@ -83,4 +83,8 @@ class RealizasController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def agenda_hoje
+    @realizas = Realiza.where(:data=>Date.today)
+  end
 end

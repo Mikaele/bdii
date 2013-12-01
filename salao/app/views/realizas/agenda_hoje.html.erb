@@ -1,0 +1,32 @@
+<h1>Listing realizas</h1>
+
+<table class="table">
+  <tr>
+    <th>Data</th>
+    <th>Hora</th>
+    <th>Satatus</th>
+    <th>Obs</th>
+    <th>Cliente</th>
+    <th>Usuario</th>
+    <th>Servico</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @realizas.each do |realiza| %>
+      <tr>
+        <td><%= realiza.data %></td>
+        <td><%= realiza.hora %></td>
+        <td><%= realiza.satatus %></td>
+        <td><%= realiza.obs %></td>
+        <td><a href="/cliente/servico/<%=realiza.cliente.id%>"><%= realiza.cliente.pessoa.nome %></a></td>
+        <td><%= realiza.servico.nome %></td>
+        <td>Cancelado?</td>
+        <td>Realizado?</td>
+      </tr>
+  <% end %>
+</table>
+
+<br />
+
+<%= link_to 'Agendar', new_realiza_path %>

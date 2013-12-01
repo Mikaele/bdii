@@ -27,6 +27,7 @@ Salao::Application.routes.draw do
   match "/cadastrar_cliente/passo2/:id", :controller=>"index"  , :action=>"cadastrar_cliente2"
   match "/aniversariente_cliente" , :controller=>"clientes" , :action=>"aniversariante"
   match "/cliente/servico/:id" , :controller=>"clientes" , :action=>"servicos"
+  match "/agenda_hoje" , :controller=>"realizas" , :action=>"agenda_hoje"
 
 
   # The priority is based upon order of creation:
