@@ -22,12 +22,14 @@ Salao::Application.routes.draw do
     root :to => "pessoas#show"
   end
 
-  match "/" ,:controller=>"pessoas" ,:action=>"index"
+  match "/" ,:controller=>"realizas" , :action=>"agenda_hoje"
   match "/cadastrar_cliente/passo1", :controller=>"index"  , :action=>"cadastrar_cliente"
   match "/cadastrar_cliente/passo2/:id", :controller=>"index"  , :action=>"cadastrar_cliente2"
   match "/aniversariente_cliente" , :controller=>"clientes" , :action=>"aniversariante"
   match "/cliente/servico/:id" , :controller=>"clientes" , :action=>"servicos"
   match "/agenda_hoje" , :controller=>"realizas" , :action=>"agenda_hoje"
+  match "/confirmar/:id" , :controller=>"realizas" , :action=>"confirmar"
+  match "/cancelar/:id" , :controller=>"realizas" , :action=>"cancelar"
 
 
   # The priority is based upon order of creation:
