@@ -20,8 +20,10 @@
         <td><%= realiza.obs %></td>
         <td><a href="/cliente/servico/<%=realiza.cliente.id%>"><%= realiza.cliente.pessoa.nome %></a></td>
         <td><%= realiza.servico.nome %></td>
-        <td>Cancelado?</td>
-        <td>Realizado?</td>
+        <% if realiza.satatus==nil %>
+        <td><a href="/confirmar/<%=realiza.id%>">Confirmar</a></td>
+        <td><a href="/cancelar/<%=realiza.id%>">Cancelar</a></td>
+        <% end %>
       </tr>
   <% end %>
 </table>

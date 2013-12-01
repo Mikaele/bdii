@@ -38,6 +38,10 @@ class RealizasController < ApplicationController
   # GET /realizas/1/edit
   def edit
     @realiza = Realiza.find(params[:id])
+    @pessoas=Pessoa.where("id in (?)",Cliente.select("pessoa_id as id").map(&:id))
+    @funcionarios=Pessoa.where("id in (?)",Usuario.select("pessoa_id as id").map(&:id))
+    @servicos=Servico.all
+
   end
 
   # POST /realizas
