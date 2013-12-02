@@ -1,4 +1,13 @@
 class ClientesController < ApplicationController
+
+  def pesquisar_usuario
+    @clientes=Cliente.joins(:pessoa).where("nome like ? or apelido like ?","%"+params[:nome]+"%","%"+params[:nome]+"%")
+    respond_to do |format|
+      format.html {render "index"}
+      format.json { render json: @clientes }
+    end
+  end
+
   # GET /clientes
   # GET /clientes.json
   def index

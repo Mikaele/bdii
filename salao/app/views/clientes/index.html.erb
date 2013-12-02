@@ -1,5 +1,10 @@
 <h1>Todos os clientes</h1>
 
+<form action="/pesquisar_usuario" method="post">
+    Pesquisar por nome: <input name="nome" type="text">
+    <input type="submit" value="Pesquisar">
+</form>
+
 <table class="table">
   <tr>
     <th>References</th>
@@ -17,13 +22,13 @@
     <td><%= cliente.aniversario %></td>
     <td><%= cliente.sexo %></td>
     <td><%= cliente.obs %></td>
-    <td><%= link_to 'Show', cliente %></td>
-    <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
-    <td><%= link_to 'Destroy', cliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Visualizar', cliente %></td>
+    <td><%= link_to 'Editar', edit_cliente_path(cliente) %></td>
+    <td><%= link_to 'Deletar', cliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Cliente', new_cliente_path %>
+<%= link_to 'Novo Cliente', new_cliente_path %>

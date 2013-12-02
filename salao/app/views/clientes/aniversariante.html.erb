@@ -6,9 +6,6 @@
     <th>Aniversario</th>
     <th>Sexo</th>
     <th>Obs</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @clientes.each do |cliente| %>
@@ -17,9 +14,6 @@
     <td><%= cliente.aniversario %></td>
     <td><%= cliente.sexo %></td>
     <td><%= cliente.obs %></td>
-    <td><%= link_to 'Show', cliente %></td>
-    <td><%= link_to 'Edit', edit_cliente_path(cliente) %></td>
-    <td><%= link_to 'Destroy', cliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
