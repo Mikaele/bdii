@@ -1,7 +1,6 @@
 <h1>Agenda do Dia</h1>
 <table class="table">
   <tr>
-    <th>Data</th>
     <th>Hora</th>
     <th>Satatus</th>
     <th>Obs</th>
@@ -14,8 +13,7 @@
 
   <% @realizas.each do |realiza| %>
       <tr>
-        <td><%= realiza.data %></td>
-        <td><%= realiza.hora %></td>
+        <td><%= realiza.hora.strftime("%H:%M") %></td>
         <td><%= realiza.satatus %></td>
         <td><%= realiza.obs %></td>
         <td><a href="/cliente/servico/<%=realiza.cliente.id%>"><%= realiza.cliente.pessoa.nome %></a></td>

@@ -1,4 +1,4 @@
-<h1>Todas os Serviços realizados</h1>
+<h1>Todos os Serviços realizados</h1>
 
 <h3>Pesquisar por data</h3>
 <form action="/servicos_data" method="post">
@@ -28,8 +28,8 @@
 
 <% @realizas.each do |realiza| %>
   <tr>
-    <td><%= realiza.data %></td>
-    <td><%= realiza.hora %></td>
+    <td><%= realiza.data.strftime("%d/%m/%Y")%></td>
+    <td><%= realiza.hora.strftime("%H:%M") %></td>
     <td><%= realiza.satatus==true ? "Realizado" : "Não realizado" %></td>
     <td><%= realiza.obs %></td>
     <td><a href="/cliente/servico/<%=realiza.cliente.id%>"><%= realiza.cliente.pessoa.nome %></a></td>

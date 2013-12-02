@@ -26,8 +26,9 @@ class RealizasController < ApplicationController
   def new
     @realiza = Realiza.new
     @pessoas=Pessoa.select("clientes.id,pessoas.nome").joins(:cliente)
+    @funcionarios=Pessoa.select("usuarios.id,pessoas.nome").joins(:usuario)
     #@pessoas=Pessoa.select("clientes.id,pessoas.nome").joins(:clientes)
-    @funcionarios=Pessoa.where("id in (?)",Usuario.select("pessoa_id as id").map(&:id))
+    #@funcionarios=Pessoa.where("id in (?)",Usuario.select("pessoa_id as id").map(&:id))
     @servicos=Servico.all
 
     respond_to do |format|
@@ -39,8 +40,8 @@ class RealizasController < ApplicationController
   # GET /realizas/1/edit
   def edit
     @realiza = Realiza.find(params[:id])
-    @pessoas=Pessoa.where("id in (?)",Cliente.select("pessoa_id as id").map(&:id))
-    @funcionarios=Pessoa.where("id in (?)",Usuario.select("pessoa_id as id").map(&:id))
+    @pessoas=Pessoa.select("clientes.id,pessoas.nome").joins(:cliente)
+    @funcionarios=Pessoa.select("usuarios.id,pessoas.nome").joins(:usuario)
     @servicos=Servico.all
 
   end
@@ -112,4 +113,14 @@ class RealizasController < ApplicationController
       format.json { render json: @realizas }
     end
   end
+
+  def atendimento
+    @reallizou=Realiza.where(:satatus=>true)
+    @funcionarios=Pessoa.select("usuarios.id,pessoas.nome").joins(:usuario)
+  end
+   def funcionario_atendeu
+     @reallizou=Realiza.where(:satatus=>true).where(:usuario_id=>params[:funcionario][:usuario_id]).where(" data  between ? and ?",params[:data1]["(1i)"]+"-"+params[:data1]["(2i)"]+"-"+params[:data1]["(3i)"],params[:data2]["(1i)"]+"-"+params[:data2]["(2i)"]+"-"+params[:data2]["(3i)"]).where("created_at != 'NULL'")
+
+     @funcionarios=Pessoa.select("usuarios.id,pessoas.nome").joins(:usuario)
+   end
 end

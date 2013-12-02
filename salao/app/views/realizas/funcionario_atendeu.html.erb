@@ -1,0 +1,32 @@
+<h1>Atendimentos de  <%= @reallizou[0].usuario.pessoa.nome %></h1>
+<form  action="/funcionario_atendeu" method="post">
+   Pesquisar por funcionario <%= collection_select("funcionario",:usuario_id,@funcionarios,:id,:nome) %>
+ <br>
+  Data inicial
+  <%= date_select"data1","" %>
+  <br>
+  Data final
+  <%= date_select"data2","" %>
+    <input type="submit" value="Pesquisar">
+</form>
+<table class="table">
+  <tr>
+    <th>Data</th>
+    <th>Hora</th>
+    <th>Obs</th>
+    <th>Cliente</th>
+    <th>Usuario</th>
+  </tr>
+
+  <% @reallizou.each do |realiza| %>
+      <tr>
+        <td><%= realiza.data.strftime("%d/%m/%Y")%></td>
+        <td><%= realiza.hora.strftime("%H:%M") %></td>
+        <td><%= realiza.obs %></td>
+        <td><a href="/cliente/servico/<%=realiza.cliente.id%>"><%= realiza.cliente.pessoa.nome %></a></td>
+        <td><%= realiza.usuario.pessoa.nome %></td>
+        <td><%= realiza.servico.nome %></td>
+
+      </tr>
+  <% end %>
+</table>
