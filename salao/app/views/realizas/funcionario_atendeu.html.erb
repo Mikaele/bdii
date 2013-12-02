@@ -10,6 +10,7 @@
     <input type="submit" value="Pesquisar">
 </form>
 <table class="table">
+  <%@valor=0%>
   <tr>
     <th>Data</th>
     <th>Hora</th>
@@ -26,7 +27,9 @@
         <td><a href="/cliente/servico/<%=realiza.cliente.id%>"><%= realiza.cliente.pessoa.nome %></a></td>
         <td><%= realiza.usuario.pessoa.nome %></td>
         <td><%= realiza.servico.nome %></td>
-
+        <%@valor=@valor+realiza.servico.preco%>
       </tr>
   <% end %>
 </table>
+<hr>
+<h4>Valor Total: R$<%=@valor%></h4>
