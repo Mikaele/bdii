@@ -1,4 +1,14 @@
-<h1>Listing realizas</h1>
+<h1>Todas os Serviços realizados</h1>
+
+<h3>Pesquisar por data</h3>
+<form action="/servicos_data" method="post">
+  Data inicial
+    <%= date_select"data1","" %>
+  <br>
+  Data final
+    <%= date_select"data2","" %>
+  <input type="submit" value="Pesqusar">
+</form>
 
 <table class="table">
   <tr>
@@ -12,19 +22,25 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @realizas.each do |realiza| %>
   <tr>
     <td><%= realiza.data %></td>
     <td><%= realiza.hora %></td>
-    <td><%= realiza.satatus %></td>
+    <td><%= realiza.satatus==true ? "Realizado" : "Não realizado" %></td>
     <td><%= realiza.obs %></td>
     <td><a href="/cliente/servico/<%=realiza.cliente.id%>"><%= realiza.cliente.pessoa.nome %></a></td>
     <td><%= realiza.servico.nome %></td>
+    <% if realiza.satatus!=true%>
     <td><%= link_to 'Show', realiza %></td>
     <td><%= link_to 'Edit', edit_realiza_path(realiza) %></td>
     <td><%= link_to 'Destroy', realiza, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><a href="/confirmar/<%=realiza.id%>">Confirmar</a></td>
+    <td><a href="/cancelar/<%=realiza.id%>">Cancelar</a></td>
+       <%end%>
   </tr>
 <% end %>
 </table>

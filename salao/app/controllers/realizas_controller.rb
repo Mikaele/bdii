@@ -25,7 +25,8 @@ class RealizasController < ApplicationController
   # GET /realizas/new.json
   def new
     @realiza = Realiza.new
-    @pessoas=Pessoa.where("id in (?)",Cliente.select("pessoa_id as id").map(&:id))
+    @pessoas=Pessoa.select("clientes.id,pessoas.nome").joins(:cliente)
+    #@pessoas=Pessoa.select("clientes.id,pessoas.nome").joins(:clientes)
     @funcionarios=Pessoa.where("id in (?)",Usuario.select("pessoa_id as id").map(&:id))
     @servicos=Servico.all
 
@@ -102,5 +103,13 @@ class RealizasController < ApplicationController
     @realiza = Realiza.find(params[:id])
     @realiza.update_attribute(:created_at,nil)
     redirect_to :agenda_hoje
+  end
+
+  def servicos_data
+    @realizas = Realiza.where(" data  between ? and ?",params[:data1]["(1i)"]+"-"+params[:data1]["(2i)"]+"-"+params[:data1]["(3i)"],params[:data2]["(1i)"]+"-"+params[:data2]["(2i)"]+"-"+params[:data2]["(3i)"]).where("created_at != 'NULL'").where(:satatus=>true)
+    respond_to do |format|
+      format.html {render "index"}
+      format.json { render json: @realizas }
+    end
   end
 end

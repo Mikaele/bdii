@@ -25,7 +25,7 @@ class ServicosController < ApplicationController
   # GET /servicos/new.json
   def new
     @servico = Servico.new
-    @categorias = Categorium.all
+    @categorias = Category.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,7 +36,7 @@ class ServicosController < ApplicationController
   # GET /servicos/1/edit
   def edit
     @servico = Servico.find(params[:id])
-    @categorias = Categorium.all
+    @categorias = Category.all
   end
 
   # POST /servicos
