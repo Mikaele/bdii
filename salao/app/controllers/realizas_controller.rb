@@ -93,7 +93,7 @@ class RealizasController < ApplicationController
   end
 
   def agenda_hoje
-    @realizas = Realiza.where(:data=>Date.today).where("created_at != 'NULL'").where(:satatus=>nil)
+    @realizas = Realiza.where(:data=>Date.today).where("created_at != ''").where(:satatus=>nil)
   end
 
   def confirmar
