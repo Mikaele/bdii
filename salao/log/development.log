@@ -72028,3 +72028,3420 @@ ActionController::RoutingError (No route matches [GET] "/assets/logo.jpg"):
 
 
   Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-03 11:09:33 -0200
+Processing by RealizasController#agenda_hoje as HTML
+  [1m[36mRealiza Load (0.9ms)[0m  [1mSELECT "realizas".* FROM "realizas" WHERE "realizas"."data" = '2013-12-03' AND "realizas"."satatus" IS NULL[0m
+  Rendered realizas/agenda_hoje.html.erb within layouts/application (42.9ms)
+Completed 500 Internal Server Error in 57ms
+
+ActionView::Template::Error (undefined method `status' for #<Realiza:0x0000000375a2a8>):
+    22:   <% @realizas.each do |realiza| %>
+    23:       <tr>
+    24:         <td><%= realiza.hora.strftime("%H:%M") %></td>
+    25:         <td><%= realiza.status %></td>
+    26:         <td><%= realiza.obs %></td>
+    27:         <td><a href="/cliente/servico/<%=realiza.cliente.id%>"><%= realiza.cliente.pessoa.nome %></a></td>
+    28:         <td><%= realiza.servico.nome %></td>
+  app/views/realizas/agenda_hoje.html.erb:25:in `block in _app_views_realizas_agenda_hoje_html_erb___266757721206882769_23907480'
+  app/views/realizas/agenda_hoje.html.erb:22:in `_app_views_realizas_agenda_hoje_html_erb___266757721206882769_23907480'
+
+
+  Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.9ms)
+
+
+Started GET "/pessoas" for 127.0.0.1 at 2013-12-03 11:09:39 -0200
+Processing by PessoasController#index as HTML
+  [1m[35mPessoa Load (0.6ms)[0m  SELECT "pessoas".* FROM "pessoas" 
+  Rendered pessoas/index.html.erb within layouts/application (6.2ms)
+Compiled categories.css  (35ms)  (pid 14778)
+Compiled formapagamentoes.css  (1ms)  (pid 14778)
+Compiled pagamentos.css  (1ms)  (pid 14778)
+Compiled realizas.css  (2ms)  (pid 14778)
+Compiled statuspagamentoes.css  (2ms)  (pid 14778)
+Compiled application.css  (63ms)  (pid 14778)
+Compiled adapters/mootools-adapter.js  (0ms)  (pid 14778)
+Compiled adapters/mootools-adapter.src.js  (0ms)  (pid 14778)
+Compiled adapters/prototype-adapter.js  (0ms)  (pid 14778)
+Compiled adapters/prototype-adapter.src.js  (1ms)  (pid 14778)
+Compiled adapters/standalone-framework.js  (0ms)  (pid 14778)
+Compiled adapters/standalone-framework.src.js  (0ms)  (pid 14778)
+Compiled categories.js  (167ms)  (pid 14778)
+Compiled formapagamentoes.js  (2ms)  (pid 14778)
+Compiled highcharts-all.js  (59ms)  (pid 14778)
+Compiled highcharts-more.js  (0ms)  (pid 14778)
+Compiled highcharts-more.src.js  (2ms)  (pid 14778)
+Compiled highcharts.js  (4ms)  (pid 14778)
+Compiled highcharts.src.js  (15ms)  (pid 14778)
+Compiled modules/annotations.js  (0ms)  (pid 14778)
+Compiled modules/annotations.src.js  (0ms)  (pid 14778)
+Compiled modules/canvas-tools.js  (2ms)  (pid 14778)
+Compiled modules/canvas-tools.src.js  (3ms)  (pid 14778)
+Compiled modules/data.js  (0ms)  (pid 14778)
+Compiled modules/data.src.js  (1ms)  (pid 14778)
+Compiled modules/drilldown.js  (0ms)  (pid 14778)
+Compiled modules/drilldown.src.js  (0ms)  (pid 14778)
+Compiled modules/exporting.js  (0ms)  (pid 14778)
+Compiled modules/exporting.src.js  (0ms)  (pid 14778)
+Compiled modules/funnel.js  (0ms)  (pid 14778)
+Compiled modules/funnel.src.js  (0ms)  (pid 14778)
+Compiled modules/heatmap.js  (0ms)  (pid 14778)
+Compiled modules/heatmap.src.js  (0ms)  (pid 14778)
+Compiled modules/map.js  (0ms)  (pid 14778)
+Compiled modules/map.src.js  (1ms)  (pid 14778)
+Compiled modules/no-data-to-display.js  (0ms)  (pid 14778)
+Compiled modules/no-data-to-display.src.js  (0ms)  (pid 14778)
+Compiled pagamentos.js  (54ms)  (pid 14778)
+Compiled realizas.js  (1ms)  (pid 14778)
+Compiled statuspagamentoes.js  (1ms)  (pid 14778)
+Compiled themes/dark-blue.js  (0ms)  (pid 14778)
+Compiled themes/dark-green.js  (0ms)  (pid 14778)
+Compiled themes/gray.js  (0ms)  (pid 14778)
+Compiled themes/grid.js  (0ms)  (pid 14778)
+Compiled themes/skies.js  (0ms)  (pid 14778)
+Compiled application.js  (572ms)  (pid 14778)
+Completed 200 OK in 1113ms (Views: 1088.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:40 -0200
+Served asset /application.css - 200 OK (42ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:40 -0200
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:40 -0200
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:40 -0200
+Served asset /clientes.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:40 -0200
+Served asset /categories.css - 200 OK (4ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:40 -0200
+Served asset /bootstrap_and_overrides.css - 200 OK (65ms)
+
+
+Started GET "/assets/formapagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /formapagamentoes.css - 200 OK (5ms)
+
+
+Started GET "/assets/pagamentos.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /pagamentos.css - 200 OK (3ms)
+
+
+Started GET "/assets/pessoas.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /pessoas.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/realizas.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /realizas.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/servicos.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /servicos.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/statuspagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /statuspagamentoes.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /jquery.js - 200 OK (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 200 OK (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 200 OK (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 200 OK (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 200 OK (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 200 OK (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 200 OK (7ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /twitter/bootstrap.js - 200 OK (91ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /adapters/mootools-adapter.js - 200 OK (2ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /adapters/mootools-adapter.src.js - 200 OK (3ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /adapters/prototype-adapter.js - 200 OK (3ms)
+
+
+Started GET "/assets/adapters/standalone-framework.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /adapters/standalone-framework.js - 200 OK (3ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /adapters/prototype-adapter.src.js - 200 OK (4ms)
+
+
+Started GET "/assets/adapters/standalone-framework.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /adapters/standalone-framework.src.js - 200 OK (7ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /bootstrap.js - 200 OK (3ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /categories.js - 200 OK (7ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /clientes.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/formapagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /formapagamentoes.js - 200 OK (3ms)
+
+
+Started GET "/assets/highcharts-all.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /highcharts-all.js - 200 OK (3ms)
+
+
+Started GET "/assets/highcharts-more.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /highcharts-more.src.js - 200 OK (11ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /highcharts.js - 200 OK (4ms)
+
+
+Started GET "/assets/highcharts-more.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /highcharts-more.js - 200 OK (9ms)
+
+
+Started GET "/assets/modules/annotations.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /modules/annotations.js - 200 OK (2ms)
+
+
+Started GET "/assets/highcharts.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /highcharts.src.js - 200 OK (10ms)
+
+
+Started GET "/assets/modules/canvas-tools.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /modules/canvas-tools.js - 200 OK (3ms)
+
+
+Started GET "/assets/modules/annotations.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /modules/annotations.src.js - 200 OK (7ms)
+
+
+Started GET "/assets/modules/canvas-tools.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /modules/canvas-tools.src.js - 200 OK (6ms)
+
+
+Started GET "/assets/modules/data.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /modules/data.js - 200 OK (2ms)
+
+
+Started GET "/assets/modules/data.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /modules/data.src.js - 200 OK (3ms)
+
+
+Started GET "/assets/modules/drilldown.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /modules/drilldown.js - 200 OK (3ms)
+
+
+Started GET "/assets/modules/exporting.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /modules/exporting.js - 200 OK (2ms)
+
+
+Started GET "/assets/modules/drilldown.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /modules/drilldown.src.js - 200 OK (2ms)
+
+
+Started GET "/assets/modules/exporting.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /modules/exporting.src.js - 200 OK (3ms)
+
+
+Started GET "/assets/modules/funnel.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /modules/funnel.js - 200 OK (2ms)
+
+
+Started GET "/assets/modules/funnel.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /modules/funnel.src.js - 200 OK (3ms)
+
+
+Started GET "/assets/modules/heatmap.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /modules/heatmap.js - 200 OK (13ms)
+
+
+Started GET "/assets/modules/heatmap.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /modules/heatmap.src.js - 200 OK (10ms)
+
+
+Started GET "/assets/modules/map.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /modules/map.js - 200 OK (3ms)
+
+
+Started GET "/assets/modules/no-data-to-display.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /modules/no-data-to-display.js - 200 OK (2ms)
+
+
+Started GET "/assets/modules/map.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /modules/map.src.js - 200 OK (6ms)
+
+
+Started GET "/assets/modules/no-data-to-display.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /modules/no-data-to-display.src.js - 200 OK (4ms)
+
+
+Started GET "/assets/pagamentos.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /pagamentos.js - 200 OK (4ms)
+
+
+Started GET "/assets/pessoas.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /pessoas.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/statuspagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:41 -0200
+Served asset /statuspagamentoes.js - 200 OK (6ms)
+
+
+Started GET "/assets/realizas.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:42 -0200
+Served asset /realizas.js - 200 OK (9ms)
+
+
+Started GET "/assets/servicos.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:42 -0200
+Served asset /servicos.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/themes/dark-blue.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:42 -0200
+Served asset /themes/dark-blue.js - 200 OK (3ms)
+
+
+Started GET "/assets/themes/dark-green.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:42 -0200
+Served asset /themes/dark-green.js - 200 OK (6ms)
+
+
+Started GET "/assets/themes/gray.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:42 -0200
+Served asset /themes/gray.js - 200 OK (5ms)
+
+
+Started GET "/assets/themes/grid.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:42 -0200
+Served asset /themes/grid.js - 200 OK (2ms)
+
+
+Started GET "/assets/themes/skies.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:42 -0200
+Served asset /themes/skies.js - 200 OK (75ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:42 -0200
+Served asset /application.js - 200 OK (173ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-12-03 11:09:42 -0200
+Served asset /logo.jpg - 200 OK (3ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:42 -0200
+Served asset /highcharts.js - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.5ms)[0m  [1mSELECT "categories".* FROM "categories" [0m
+  Rendered categories/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 183ms (Views: 169.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /application.css - 304 Not Modified (54ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formapagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /formapagamentoes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pagamentos.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /pagamentos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/realizas.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /realizas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pessoas.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /pessoas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servicos.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /servicos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuspagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /statuspagamentoes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /adapters/mootools-adapter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /adapters/prototype-adapter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /adapters/mootools-adapter.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/standalone-framework.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /adapters/standalone-framework.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /adapters/prototype-adapter.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /bootstrap.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/adapters/standalone-framework.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /adapters/standalone-framework.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts-all.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /highcharts-all.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/formapagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /formapagamentoes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /highcharts.src.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/highcharts-more.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /highcharts-more.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /highcharts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts-more.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /highcharts-more.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/annotations.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /modules/annotations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/annotations.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:50 -0200
+Served asset /modules/annotations.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/canvas-tools.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /modules/canvas-tools.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/drilldown.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /modules/drilldown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/drilldown.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /modules/drilldown.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/canvas-tools.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /modules/canvas-tools.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/data.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /modules/data.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/data.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /modules/data.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/exporting.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /modules/exporting.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/funnel.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /modules/funnel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/heatmap.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /modules/heatmap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/exporting.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /modules/exporting.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/heatmap.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /modules/heatmap.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/funnel.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /modules/funnel.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/map.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /modules/map.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/map.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /modules/map.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/no-data-to-display.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /modules/no-data-to-display.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/no-data-to-display.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /modules/no-data-to-display.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pagamentos.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /pagamentos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pessoas.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /pessoas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/realizas.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /realizas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servicos.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /servicos.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/statuspagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /statuspagamentoes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/dark-blue.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /themes/dark-blue.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/gray.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /themes/gray.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/grid.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /themes/grid.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/dark-green.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /themes/dark-green.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/skies.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /themes/skies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /application.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:51 -0200
+Served asset /highcharts.js - 304 Not Modified (0ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Processing by CategoriesController#new as HTML
+  Rendered categories/_form.html.erb (2.8ms)
+  Rendered categories/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 222ms (Views: 220.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formapagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /formapagamentoes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pessoas.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /pessoas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/realizas.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /realizas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pagamentos.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /pagamentos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servicos.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /servicos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuspagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /statuspagamentoes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:52 -0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /adapters/mootools-adapter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /adapters/mootools-adapter.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /adapters/prototype-adapter.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/standalone-framework.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /adapters/standalone-framework.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /adapters/prototype-adapter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/standalone-framework.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /adapters/standalone-framework.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formapagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /formapagamentoes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts-all.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /highcharts-all.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/highcharts-more.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /highcharts-more.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts-more.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /highcharts-more.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /highcharts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/annotations.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /modules/annotations.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/annotations.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /modules/annotations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /highcharts.src.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/canvas-tools.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /modules/canvas-tools.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/data.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /modules/data.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/canvas-tools.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /modules/canvas-tools.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/data.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /modules/data.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/drilldown.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /modules/drilldown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/exporting.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /modules/exporting.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/drilldown.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /modules/drilldown.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/funnel.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /modules/funnel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/exporting.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /modules/exporting.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/funnel.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /modules/funnel.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/heatmap.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /modules/heatmap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/heatmap.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /modules/heatmap.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/map.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /modules/map.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/no-data-to-display.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /modules/no-data-to-display.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pagamentos.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /pagamentos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/no-data-to-display.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /modules/no-data-to-display.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/map.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /modules/map.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pessoas.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /pessoas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/realizas.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /realizas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuspagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /statuspagamentoes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/gray.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /themes/gray.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/dark-green.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /themes/dark-green.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servicos.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /servicos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/dark-blue.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /themes/dark-blue.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/skies.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /themes/skies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/grid.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /themes/grid.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /application.js - 304 Not Modified (89ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:53 -0200
+Served asset /highcharts.js - 304 Not Modified (0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2013-12-03 11:09:55 -0200
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories".* FROM "categories" 
+  Rendered categories/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 129ms (Views: 126.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /application.css - 304 Not Modified (66ms)
+
+
+Started GET "/assets/pagamentos.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /pagamentos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pessoas.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /pessoas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formapagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /formapagamentoes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servicos.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /servicos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuspagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /statuspagamentoes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/realizas.css?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /realizas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /adapters/mootools-adapter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/standalone-framework.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /adapters/standalone-framework.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /adapters/prototype-adapter.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /adapters/mootools-adapter.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /adapters/prototype-adapter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/standalone-framework.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /adapters/standalone-framework.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts-more.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /highcharts-more.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts-all.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /highcharts-all.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/highcharts-more.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /highcharts-more.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /highcharts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/formapagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /formapagamentoes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /highcharts.src.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/annotations.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /modules/annotations.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/canvas-tools.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /modules/canvas-tools.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/annotations.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /modules/annotations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/canvas-tools.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /modules/canvas-tools.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/data.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /modules/data.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/data.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /modules/data.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/drilldown.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /modules/drilldown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/drilldown.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /modules/drilldown.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/exporting.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /modules/exporting.js - 304 Not Modified (78ms)
+
+
+Started GET "/assets/modules/funnel.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /modules/funnel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/exporting.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /modules/exporting.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/funnel.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /modules/funnel.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/heatmap.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /modules/heatmap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/heatmap.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /modules/heatmap.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/map.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /modules/map.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/map.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /modules/map.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/no-data-to-display.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /modules/no-data-to-display.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pagamentos.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /pagamentos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/no-data-to-display.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /modules/no-data-to-display.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pessoas.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /pessoas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/realizas.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /realizas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servicos.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /servicos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuspagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /statuspagamentoes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/dark-green.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /themes/dark-green.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/gray.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /themes/gray.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/dark-blue.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /themes/dark-blue.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/grid.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /themes/grid.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/skies.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /themes/skies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:56 -0200
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:09:57 -0200
+Served asset /highcharts.js - 304 Not Modified (0ms)
+
+
+Started GET "/servicos" for 127.0.0.1 at 2013-12-03 11:10:01 -0200
+Processing by ServicosController#index as HTML
+  [1m[36mServico Load (0.5ms)[0m  [1mSELECT "servicos".* FROM "servicos" [0m
+  [1m[35mCategory Load (0.6ms)[0m  SELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "categories".* FROM "categories" WHERE "categories"."id" = 1 LIMIT 1[0m
+  Rendered servicos/index.html.erb within layouts/application (69.6ms)
+Completed 200 OK in 214ms (Views: 198.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formapagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /formapagamentoes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pessoas.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /pessoas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/realizas.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /realizas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pagamentos.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /pagamentos.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuspagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /statuspagamentoes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servicos.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /servicos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (90ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /adapters/mootools-adapter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /adapters/mootools-adapter.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/standalone-framework.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /adapters/standalone-framework.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /adapters/prototype-adapter.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/standalone-framework.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /adapters/standalone-framework.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /adapters/prototype-adapter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /categories.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /highcharts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts-more.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /highcharts-more.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formapagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /formapagamentoes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts-more.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /highcharts-more.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts-all.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /highcharts-all.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/highcharts.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /highcharts.src.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/modules/annotations.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /modules/annotations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/annotations.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /modules/annotations.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/canvas-tools.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /modules/canvas-tools.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/modules/canvas-tools.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /modules/canvas-tools.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/data.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /modules/data.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/data.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /modules/data.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/drilldown.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:02 -0200
+Served asset /modules/drilldown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/drilldown.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /modules/drilldown.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/exporting.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /modules/exporting.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/exporting.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /modules/exporting.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/funnel.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /modules/funnel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/funnel.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /modules/funnel.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/heatmap.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /modules/heatmap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/heatmap.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /modules/heatmap.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/map.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /modules/map.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/no-data-to-display.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /modules/no-data-to-display.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/map.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /modules/map.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/no-data-to-display.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /modules/no-data-to-display.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/realizas.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /realizas.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pagamentos.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /pagamentos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pessoas.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /pessoas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servicos.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /servicos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/dark-blue.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /themes/dark-blue.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuspagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /statuspagamentoes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/gray.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /themes/gray.js - 304 Not Modified (70ms)
+
+
+Started GET "/assets/themes/dark-green.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /themes/dark-green.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/grid.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /themes/grid.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/skies.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /themes/skies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:03 -0200
+Served asset /highcharts.js - 304 Not Modified (0ms)
+
+
+Started GET "/atendimento" for 127.0.0.1 at 2013-12-03 11:10:08 -0200
+Processing by RealizasController#atendimento as HTML
+  [1m[35mPessoa Load (1.1ms)[0m  SELECT usuarios.id,pessoas.nome FROM "pessoas" INNER JOIN "usuarios" ON "usuarios"."pessoa_id" = "pessoas"."id"
+  [1m[36mRealiza Load (1.0ms)[0m  [1mSELECT "realizas".* FROM "realizas" WHERE "realizas"."status" = '1'[0m
+PG::UndefinedColumn: ERROR:  column realizas.status does not exist
+LINE 1: SELECT "realizas".* FROM "realizas"  WHERE "realizas"."statu...
+                                                   ^
+: SELECT "realizas".* FROM "realizas"  WHERE "realizas"."status" = '1'
+  Rendered realizas/atendimento.html.erb within layouts/application (36.9ms)
+Completed 500 Internal Server Error in 41ms
+
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column realizas.status does not exist
+LINE 1: SELECT "realizas".* FROM "realizas"  WHERE "realizas"."statu...
+                                                   ^
+: SELECT "realizas".* FROM "realizas"  WHERE "realizas"."status" = '1'):
+    23:   </thead>
+    24: 
+    25:   <tbody>
+    26:   <% @reallizou.each do |realiza| %>
+    27:       <tr>
+    28:         <td><%= realiza.data.strftime("%d/%m/%Y")%></td>
+    29:         <td><%= realiza.hora.strftime("%H:%M") %></td>
+  app/views/realizas/atendimento.html.erb:26:in `_app_views_realizas_atendimento_html_erb__160135961794228503_32399540'
+
+
+  Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (51.6ms)
+  Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (61.4ms)
+
+
+Started GET "/servico/relatorio" for 127.0.0.1 at 2013-12-03 11:10:11 -0200
+Processing by ServicosController#relatorio as HTML
+  [1m[35mRealiza Load (2.1ms)[0m  SELECT sum(preco) as valor,servicos.*,realizas.* FROM "realizas" INNER JOIN "servicos" ON "servicos"."id" = "realizas"."servico_id" GROUP BY nome ORDER BY nome asc
+PG::GroupingError: ERROR:  column "servicos.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT sum(preco) as valor,servicos.*,realizas.* FROM "reali...
+                                   ^
+: SELECT sum(preco) as valor,servicos.*,realizas.* FROM "realizas" INNER JOIN "servicos" ON "servicos"."id" = "realizas"."servico_id" GROUP BY nome ORDER BY nome asc
+  Rendered servicos/relatorio.html.erb within layouts/application (15.4ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (PG::GroupingError: ERROR:  column "servicos.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: SELECT sum(preco) as valor,servicos.*,realizas.* FROM "reali...
+                                   ^
+: SELECT sum(preco) as valor,servicos.*,realizas.* FROM "realizas" INNER JOIN "servicos" ON "servicos"."id" = "realizas"."servico_id" GROUP BY nome ORDER BY nome asc):
+    9:                 text: ''
+    10:             },
+    11:             xAxis: {
+    12:                 categories: <%= raw @relatorio.map(&:nome) %>,
+    13:                 title: {
+    14:                     text: null
+    15:                 }
+  app/views/servicos/relatorio.html.erb:12:in `_app_views_servicos_relatorio_html_erb__2458041837020128266_27525020'
+
+
+  Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.2ms)
+
+
+Started GET "/realizas" for 127.0.0.1 at 2013-12-03 11:10:15 -0200
+Processing by RealizasController#index as HTML
+  [1m[36mRealiza Load (0.4ms)[0m  [1mSELECT "realizas".* FROM "realizas" [0m
+ERROR: compiling _app_views_realizas_index_html_erb___2104255931768132272_38263000 RAISED /home/nathan/Documentos/bdii/salao/app/views/realizas/index.html.erb:54: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/nathan/Documentos/bdii/salao/app/views/realizas/index.html.erb:56: syntax error, unexpected end-of-input, expecting keyword_end
+Function body:           def _app_views_realizas_index_html_erb___2104255931768132272_38263000(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "realizas/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Todos os Serviços realizados</h1>
+
+');@output_buffer.append= ( link_to 'Novo serviço', new_realiza_path, class:"btn" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+<h3>Pesquisar por data</h3>
+<form action="/servicos_data" method="post">
+  Data Inicial:
+    ');@output_buffer.append= ( date_select"data1","" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <br>
+  Data Final:
+    ');@output_buffer.append= ( date_select"data2","" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <input type="submit" class="btn" value="Pesquisar">
+</form>
+
+<table class="table table-hover table-condensed">
+  <thead>
+  <tr>
+    <th>Data</th>
+    <th>Hora</th>
+    <th>Cliente</th>
+    <th>Serviço</th>
+    <th>Status</th>
+    <th>Obs</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+'); @realizas.each do |realiza| 
+@output_buffer.safe_concat('  <tr>
+    <td>');@output_buffer.append= ( realiza.data.strftime("%d/%m/%Y"));@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( realiza.hora.strftime("%H:%M") );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( realiza.status=="1" ? "Realizado" : "Não realizado" );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( realiza.obs );@output_buffer.safe_concat('</td>
+    <td><a href="/cliente/servico/');@output_buffer.append= (realiza.cliente.id);@output_buffer.safe_concat('">');@output_buffer.append= ( realiza.cliente.pessoa.nome );@output_buffer.safe_concat('</a></td>
+    <td>');@output_buffer.append= ( realiza.servico.nome );@output_buffer.safe_concat('</td>
+');     if realiza.satatus!=true
+@output_buffer.safe_concat('        <td><a href="/confirmar/');@output_buffer.append= (realiza.id );@output_buffer.safe_concat('">Confirmar</a></td>
+        <td><a href="/cancelar/');@output_buffer.append= (realiza.id);@output_buffer.safe_concat('">Cancelar</a></td>
+    <td>');@output_buffer.append= ( link_to 'Visualizar', realiza, class:"btn btn-info" );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( link_to 'Editar', edit_realiza_path(realiza), class:"btn btn-warning" );@output_buffer.safe_concat('</td>
+    <td>');@output_buffer.append= ( link_to 'Apagar', realiza, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" );@output_buffer.safe_concat('</td>
+');     if realiza.status==0
+@output_buffer.safe_concat('    
+');       end
+@output_buffer.safe_concat('  </tr>
+'); end 
+@output_buffer.safe_concat('      </tbody>
+</table>');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `module_eval'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_view/template.rb:297:in `compile'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_view/template.rb:244:in `block in compile!'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_view/template.rb:232:in `synchronize'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_view/template.rb:232:in `compile!'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_view/template.rb:144:in `block in render'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/notifications.rb:125:in `instrument'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_view/template.rb:143:in `render'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:88:in `render'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/nathan/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/home/nathan/Documentos/bdii/salao/app/controllers/realizas_controller.rb:7:in `index'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:167:in `process_action'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:414:in `_run__2078635735225201144__process_action__4500696721035922144__callbacks'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/notifications.rb:123:in `instrument'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-3.2.13/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/abstract_controller/base.rb:121:in `process'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/abstract_controller/rendering.rb:45:in `process'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal.rb:203:in `dispatch'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_controller/metal.rb:246:in `block in action'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/routing/route_set.rb:612:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-3.2.13/lib/active_record/query_cache.rb:64:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activerecord-3.2.13/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `_run__3810484029512601514__call__4522210637781009105__callbacks'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/railties-3.2.13/lib/rails/rack/logger.rb:32:in `call_app'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `block in call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/tagged_logging.rb:22:in `tagged'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/railties-3.2.13/lib/rails/rack/logger.rb:16:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-3.2.13/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/static.rb:63:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/railties-3.2.13/lib/rails/engine.rb:479:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/railties-3.2.13/lib/rails/application.rb:223:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/railties-3.2.13/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+/home/nathan/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/home/nathan/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/home/nathan/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered realizas/index.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (/home/nathan/Documentos/bdii/salao/app/views/realizas/index.html.erb:54: syntax error, unexpected keyword_ensure, expecting keyword_end
+/home/nathan/Documentos/bdii/salao/app/views/realizas/index.html.erb:56: syntax error, unexpected end-of-input, expecting keyword_end):
+    51: <% end %>
+    52:       </tbody>
+    53: </table>
+  app/controllers/realizas_controller.rb:7:in `index'
+
+
+  Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.1ms)
+
+
+Started GET "/realizas/new" for 127.0.0.1 at 2013-12-03 11:10:23 -0200
+Processing by RealizasController#new as HTML
+  [1m[35mServico Load (0.4ms)[0m  SELECT "servicos".* FROM "servicos" 
+  [1m[36mPessoa Load (0.6ms)[0m  [1mSELECT clientes.id,pessoas.nome FROM "pessoas" INNER JOIN "clientes" ON "clientes"."pessoa_id" = "pessoas"."id"[0m
+  [1m[35mPessoa Load (0.7ms)[0m  SELECT usuarios.id,pessoas.nome FROM "pessoas" INNER JOIN "usuarios" ON "usuarios"."pessoa_id" = "pessoas"."id"
+  [1m[36mFormapagamentoe Load (0.6ms)[0m  [1mSELECT "formapagamentoes".* FROM "formapagamentoes" [0m
+  Rendered realizas/_form.html.erb (68.1ms)
+  Rendered realizas/new.html.erb within layouts/application (70.1ms)
+Completed 200 OK in 329ms (Views: 319.9ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:23 -0200
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pagamentos.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /pagamentos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formapagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /formapagamentoes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pessoas.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /pessoas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/realizas.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /realizas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servicos.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /servicos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuspagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /statuspagamentoes.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /adapters/mootools-adapter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /adapters/mootools-adapter.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /adapters/prototype-adapter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /adapters/prototype-adapter.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/standalone-framework.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /adapters/standalone-framework.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/standalone-framework.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /adapters/standalone-framework.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /clientes.js - 304 Not Modified (90ms)
+
+
+Started GET "/assets/highcharts-all.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /highcharts-all.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formapagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /formapagamentoes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts-more.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /highcharts-more.src.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/highcharts-more.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /highcharts-more.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /highcharts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/annotations.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /modules/annotations.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /highcharts.src.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/modules/annotations.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /modules/annotations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/canvas-tools.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /modules/canvas-tools.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/canvas-tools.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /modules/canvas-tools.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/data.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /modules/data.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/data.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /modules/data.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/modules/drilldown.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /modules/drilldown.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/modules/drilldown.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /modules/drilldown.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/exporting.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /modules/exporting.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/modules/exporting.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /modules/exporting.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/funnel.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /modules/funnel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/funnel.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /modules/funnel.src.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/modules/heatmap.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /modules/heatmap.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/map.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /modules/map.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/heatmap.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /modules/heatmap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/map.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /modules/map.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/no-data-to-display.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /modules/no-data-to-display.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/no-data-to-display.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /modules/no-data-to-display.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pagamentos.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /pagamentos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pessoas.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /pessoas.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/realizas.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /realizas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servicos.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /servicos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuspagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /statuspagamentoes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/dark-blue.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /themes/dark-blue.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/gray.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /themes/gray.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/dark-green.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /themes/dark-green.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/skies.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /themes/skies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/grid.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /themes/grid.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /application.js - 304 Not Modified (79ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:24 -0200
+Served asset /highcharts.js - 304 Not Modified (0ms)
+
+
+Started GET "/clientes" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Processing by ClientesController#index as HTML
+  [1m[35mCliente Load (0.3ms)[0m  SELECT "clientes".* FROM "clientes" 
+  [1m[36mPessoa Load (0.5ms)[0m  [1mSELECT "pessoas".* FROM "pessoas" WHERE "pessoas"."id" = 1 LIMIT 1[0m
+  Rendered clientes/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 189ms (Views: 172.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/formapagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /formapagamentoes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pagamentos.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /pagamentos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/realizas.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /realizas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pessoas.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /pessoas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servicos.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /servicos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuspagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /statuspagamentoes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /adapters/mootools-adapter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:37 -0200
+Served asset /adapters/mootools-adapter.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /adapters/prototype-adapter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /adapters/prototype-adapter.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/standalone-framework.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /adapters/standalone-framework.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formapagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /formapagamentoes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/standalone-framework.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /adapters/standalone-framework.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts-all.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /highcharts-all.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/highcharts-more.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /highcharts-more.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts-more.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /highcharts-more.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /highcharts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /highcharts.src.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/annotations.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /modules/annotations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/annotations.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /modules/annotations.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/canvas-tools.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /modules/canvas-tools.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/data.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /modules/data.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/canvas-tools.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /modules/canvas-tools.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/data.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /modules/data.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/drilldown.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /modules/drilldown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/drilldown.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /modules/drilldown.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/exporting.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /modules/exporting.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/exporting.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /modules/exporting.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/funnel.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /modules/funnel.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/heatmap.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /modules/heatmap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/funnel.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /modules/funnel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/heatmap.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /modules/heatmap.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/map.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /modules/map.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/map.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /modules/map.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/no-data-to-display.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /modules/no-data-to-display.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/no-data-to-display.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /modules/no-data-to-display.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pagamentos.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /pagamentos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pessoas.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /pessoas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/realizas.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /realizas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuspagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /statuspagamentoes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/dark-blue.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /themes/dark-blue.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/gray.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /themes/gray.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/dark-green.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /themes/dark-green.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/grid.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /themes/grid.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servicos.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /servicos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/skies.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /themes/skies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:38 -0200
+Served asset /highcharts.js - 304 Not Modified (0ms)
+
+
+Started GET "/clientes/new" for 127.0.0.1 at 2013-12-03 11:10:45 -0200
+Processing by ClientesController#new as HTML
+  Rendered clientes/_form.html.erb (6.2ms)
+  Rendered clientes/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 189ms (Views: 187.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:45 -0200
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:45 -0200
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:45 -0200
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pessoas.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /pessoas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formapagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /formapagamentoes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pagamentos.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /pagamentos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/realizas.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /realizas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servicos.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /servicos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/statuspagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /statuspagamentoes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /adapters/mootools-adapter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /adapters/mootools-adapter.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /adapters/prototype-adapter.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/adapters/standalone-framework.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /adapters/standalone-framework.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /adapters/prototype-adapter.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/standalone-framework.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /adapters/standalone-framework.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formapagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /formapagamentoes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts-more.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /highcharts-more.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/highcharts-all.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /highcharts-all.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/highcharts-more.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /highcharts-more.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/annotations.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /modules/annotations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/annotations.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /modules/annotations.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/canvas-tools.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /modules/canvas-tools.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /highcharts.src.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /highcharts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/canvas-tools.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /modules/canvas-tools.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/data.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /modules/data.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/modules/data.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /modules/data.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/drilldown.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /modules/drilldown.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/drilldown.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /modules/drilldown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/exporting.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /modules/exporting.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/exporting.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /modules/exporting.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/funnel.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /modules/funnel.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/funnel.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /modules/funnel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/heatmap.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /modules/heatmap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/map.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /modules/map.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/heatmap.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /modules/heatmap.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/map.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /modules/map.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/no-data-to-display.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /modules/no-data-to-display.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/no-data-to-display.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /modules/no-data-to-display.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pagamentos.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /pagamentos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/realizas.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /realizas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pessoas.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /pessoas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servicos.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /servicos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/grid.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /themes/grid.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/dark-blue.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /themes/dark-blue.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/dark-green.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /themes/dark-green.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/gray.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /themes/gray.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuspagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /statuspagamentoes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/skies.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /themes/skies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /application.js - 304 Not Modified (84ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:10:46 -0200
+Served asset /highcharts.js - 304 Not Modified (0ms)
+
+
+Started GET "/agenda_hoje" for 127.0.0.1 at 2013-12-03 11:10:52 -0200
+Processing by RealizasController#agenda_hoje as HTML
+  [1m[35mRealiza Load (1.0ms)[0m  SELECT "realizas".* FROM "realizas" WHERE "realizas"."data" = '2013-12-03' AND "realizas"."satatus" IS NULL
+  Rendered realizas/agenda_hoje.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `status' for #<Realiza:0x0000000364e3f0>):
+    22:   <% @realizas.each do |realiza| %>
+    23:       <tr>
+    24:         <td><%= realiza.hora.strftime("%H:%M") %></td>
+    25:         <td><%= realiza.status %></td>
+    26:         <td><%= realiza.obs %></td>
+    27:         <td><a href="/cliente/servico/<%=realiza.cliente.id%>"><%= realiza.cliente.pessoa.nome %></a></td>
+    28:         <td><%= realiza.servico.nome %></td>
+  app/views/realizas/agenda_hoje.html.erb:25:in `block in _app_views_realizas_agenda_hoje_html_erb___266757721206882769_23907480'
+  app/views/realizas/agenda_hoje.html.erb:22:in `_app_views_realizas_agenda_hoje_html_erb___266757721206882769_23907480'
+
+
+  Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.9ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-03 11:12:30 -0200
+Processing by RealizasController#agenda_hoje as HTML
+  [1m[36mRealiza Load (0.9ms)[0m  [1mSELECT "realizas".* FROM "realizas" WHERE "realizas"."data" = '2013-12-03' AND "realizas"."satatus" IS NULL[0m
+  Rendered realizas/agenda_hoje.html.erb within layouts/application (34.1ms)
+Completed 500 Internal Server Error in 46ms
+
+ActionView::Template::Error (undefined method `status' for #<Realiza:0x0000000414a9e8>):
+    22:   <% @realizas.each do |realiza| %>
+    23:       <tr>
+    24:         <td><%= realiza.hora.strftime("%H:%M") %></td>
+    25:         <td><%= realiza.status %></td>
+    26:         <td><%= realiza.obs %></td>
+    27:         <td><a href="/cliente/servico/<%=realiza.cliente.id%>"><%= realiza.cliente.pessoa.nome %></a></td>
+    28:         <td><%= realiza.servico.nome %></td>
+  app/views/realizas/agenda_hoje.html.erb:25:in `block in _app_views_realizas_agenda_hoje_html_erb__566660876583549735_29130520'
+  app/views/realizas/agenda_hoje.html.erb:22:in `_app_views_realizas_agenda_hoje_html_erb__566660876583549735_29130520'
+
+
+  Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/nathan/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.7ms)
+
+
+Started GET "/pessoas" for 127.0.0.1 at 2013-12-03 11:12:34 -0200
+Processing by PessoasController#index as HTML
+  [1m[35mPessoa Load (0.6ms)[0m  SELECT "pessoas".* FROM "pessoas" 
+  Rendered pessoas/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 451ms (Views: 426.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:34 -0200
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:34 -0200
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:34 -0200
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/formapagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:34 -0200
+Served asset /formapagamentoes.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:34 -0200
+Served asset /clientes.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:34 -0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/pagamentos.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /pagamentos.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /categories.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/pessoas.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /pessoas.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/realizas.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /realizas.css - 304 Not Modified (52ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/servicos.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /servicos.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuspagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /statuspagamentoes.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /adapters/mootools-adapter.js - 304 Not Modified (65ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /adapters/mootools-adapter.src.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /adapters/prototype-adapter.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /adapters/prototype-adapter.src.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/adapters/standalone-framework.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /adapters/standalone-framework.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/adapters/standalone-framework.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /adapters/standalone-framework.src.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /categories.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /clientes.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/formapagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /formapagamentoes.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/highcharts-all.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /highcharts-all.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/highcharts-more.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /highcharts-more.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/highcharts-more.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /highcharts-more.src.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /highcharts.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/highcharts.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /highcharts.src.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/modules/annotations.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /modules/annotations.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/annotations.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /modules/annotations.src.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/canvas-tools.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /modules/canvas-tools.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/canvas-tools.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /modules/canvas-tools.src.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/modules/data.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /modules/data.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/data.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /modules/data.src.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/drilldown.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /modules/drilldown.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/drilldown.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /modules/drilldown.src.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/modules/exporting.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /modules/exporting.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/exporting.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /modules/exporting.src.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/funnel.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /modules/funnel.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/funnel.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /modules/funnel.src.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/heatmap.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /modules/heatmap.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/heatmap.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /modules/heatmap.src.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/map.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /modules/map.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/map.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /modules/map.src.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/no-data-to-display.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /modules/no-data-to-display.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/modules/no-data-to-display.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /modules/no-data-to-display.src.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/pagamentos.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /pagamentos.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/pessoas.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /pessoas.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/servicos.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /servicos.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/realizas.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /realizas.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/statuspagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /statuspagamentoes.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/themes/dark-green.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /themes/dark-green.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/themes/dark-blue.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /themes/dark-blue.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/themes/gray.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /themes/gray.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/themes/grid.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /themes/grid.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/themes/skies.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /themes/skies.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:35 -0200
+Served asset /application.js - 304 Not Modified (227ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-12-03 11:12:36 -0200
+Served asset /logo.jpg - 304 Not Modified (2ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:36 -0200
+Served asset /highcharts.js - 304 Not Modified (0ms)
+
+
+Started GET "/realizas/new" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Processing by RealizasController#new as HTML
+  [1m[36mServico Load (0.6ms)[0m  [1mSELECT "servicos".* FROM "servicos" [0m
+  [1m[35mPessoa Load (0.7ms)[0m  SELECT clientes.id,pessoas.nome FROM "pessoas" INNER JOIN "clientes" ON "clientes"."pessoa_id" = "pessoas"."id"
+  [1m[36mPessoa Load (0.8ms)[0m  [1mSELECT usuarios.id,pessoas.nome FROM "pessoas" INNER JOIN "usuarios" ON "usuarios"."pessoa_id" = "pessoas"."id"[0m
+  [1m[35mFormapagamentoe Load (0.5ms)[0m  SELECT "formapagamentoes".* FROM "formapagamentoes" 
+  Rendered realizas/_form.html.erb (134.3ms)
+  Rendered realizas/new.html.erb within layouts/application (138.7ms)
+Completed 200 OK in 298ms (Views: 265.6ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /twitter-bootstrap-static/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /twitter-bootstrap-static/fontawesome.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /clientes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /categories.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/formapagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /formapagamentoes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pessoas.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /pessoas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pagamentos.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /pagamentos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/realizas.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /realizas.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servicos.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /servicos.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuspagamentoes.css?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /statuspagamentoes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /twitter/bootstrap/bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /twitter/bootstrap/bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /twitter/bootstrap/bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /twitter/bootstrap/bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /twitter/bootstrap/bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /twitter/bootstrap/bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /twitter/bootstrap/bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /twitter/bootstrap/bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /twitter/bootstrap/bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /twitter/bootstrap/bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /twitter/bootstrap/bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /twitter/bootstrap/bootstrap-affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /twitter/bootstrap/bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /twitter/bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /adapters/mootools-adapter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/mootools-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /adapters/mootools-adapter.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /adapters/prototype-adapter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/standalone-framework.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:38 -0200
+Served asset /adapters/standalone-framework.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/adapters/prototype-adapter.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /adapters/prototype-adapter.src.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/adapters/standalone-framework.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /adapters/standalone-framework.src.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /categories.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts-all.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /highcharts-all.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts-more.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /highcharts-more.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/formapagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /formapagamentoes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clientes.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /clientes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /highcharts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /highcharts.src.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/modules/annotations.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /modules/annotations.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/annotations.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /modules/annotations.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/highcharts-more.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /highcharts-more.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/canvas-tools.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /modules/canvas-tools.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/canvas-tools.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /modules/canvas-tools.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/data.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /modules/data.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/data.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /modules/data.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/exporting.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /modules/exporting.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/drilldown.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /modules/drilldown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/funnel.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /modules/funnel.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/drilldown.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /modules/drilldown.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/funnel.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /modules/funnel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/exporting.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /modules/exporting.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/heatmap.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /modules/heatmap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/no-data-to-display.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /modules/no-data-to-display.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/map.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /modules/map.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/heatmap.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /modules/heatmap.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/map.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /modules/map.src.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/modules/no-data-to-display.src.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /modules/no-data-to-display.src.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/pessoas.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /pessoas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pagamentos.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /pagamentos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/realizas.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /realizas.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servicos.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /servicos.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/statuspagamentoes.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /statuspagamentoes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/dark-blue.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /themes/dark-blue.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/dark-green.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /themes/dark-green.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/gray.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /themes/gray.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/grid.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /themes/grid.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/themes/skies.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /themes/skies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /application.js - 304 Not Modified (84ms)
+
+
+Started GET "/assets/highcharts.js?body=1" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /highcharts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/logo.jpg" for 127.0.0.1 at 2013-12-03 11:12:39 -0200
+Served asset /logo.jpg - 304 Not Modified (0ms)
