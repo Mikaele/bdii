@@ -40,7 +40,7 @@ class StatuspagamentoesController < ApplicationController
   # POST /statuspagamentoes
   # POST /statuspagamentoes.json
   def create
-    @statuspagamento = Statuspagamentoe.new(params[:statuspagamento])
+    @statuspagamento = Statuspagamentoe.new(params[:statuspagamentoe])
 
     respond_to do |format|
       if @statuspagamento.save
@@ -59,7 +59,7 @@ class StatuspagamentoesController < ApplicationController
     @statuspagamento = Statuspagamentoe.find(params[:id])
 
     respond_to do |format|
-      if @statuspagamento.update_attributes(params[:statuspagamento])
+      if @statuspagamento.update_attributes(params[:statuspagamentoe])
         format.html { redirect_to @statuspagamento, notice: 'Statuspagamentoe was successfully updated.' }
         format.json { head :no_content }
       else

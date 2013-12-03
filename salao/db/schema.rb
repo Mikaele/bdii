@@ -42,12 +42,14 @@ ActiveRecord::Schema.define(:version => 20131202163624) do
     t.integer  "formapagamentoe_id"
     t.integer  "cliente_id"
     t.integer  "servico_id"
+    t.integer  "realiza_id"
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
   end
 
   add_index "pagamentos", ["cliente_id"], :name => "index_pagamentos_on_cliente_id"
   add_index "pagamentos", ["formapagamentoe_id"], :name => "index_pagamentos_on_formapagamentoe_id"
+  add_index "pagamentos", ["realiza_id"], :name => "index_pagamentos_on_realiza_id"
   add_index "pagamentos", ["servico_id"], :name => "index_pagamentos_on_servico_id"
 
   create_table "pessoas", :force => true do |t|
@@ -64,17 +66,19 @@ ActiveRecord::Schema.define(:version => 20131202163624) do
   create_table "realizas", :force => true do |t|
     t.date     "data"
     t.time     "hora"
-    t.boolean  "satatus"
+    t.integer  "statuspagamento_id"
+    t.string   "status",             :default => "0"
     t.string   "obs"
     t.integer  "cliente_id"
     t.integer  "usuario_id"
     t.integer  "servico_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
   end
 
   add_index "realizas", ["cliente_id"], :name => "index_realizas_on_cliente_id"
   add_index "realizas", ["servico_id"], :name => "index_realizas_on_servico_id"
+  add_index "realizas", ["statuspagamento_id"], :name => "index_realizas_on_statuspagamento_id"
   add_index "realizas", ["usuario_id"], :name => "index_realizas_on_usuario_id"
 
   create_table "servicos", :force => true do |t|

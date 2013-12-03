@@ -19,8 +19,8 @@
     <%= f.time_select :hora %>
   </div>
   <div class="field span3">
-    <%= f.label :satatus %><br />
-    <%= f.text_field :satatus %>
+    <%= f.label :statuspagamento_id %><br />
+    <%= f.collection_select(:statuspagamento_id,Statuspagamentoe.all,:id,:tipo) %>
   </div>
   <div class="field span4">
     <%= f.label :obs %><br />

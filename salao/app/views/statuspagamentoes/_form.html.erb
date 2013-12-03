@@ -1,0 +1,21 @@
+<%= form_for(@statuspagamento) do |f| %>
+  <% if @statuspagamento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@statuspagamento.errors.count, "error") %> prohibited this statuspagamento from being saved:</h2>
+
+      <ul>
+      <% @statuspagamento.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tipo %><br />
+    <%= f.text_field :tipo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

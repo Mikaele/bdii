@@ -1,0 +1,23 @@
+<h1>Listing statuspagamentoes</h1>
+
+<table>
+  <tr>
+    <th>Tipo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @statuspagamentoes.each do |statuspagamento| %>
+  <tr>
+    <td><%= statuspagamento.tipo %></td>
+    <td><%= link_to 'Show', statuspagamento %></td>
+    <td><%= link_to 'Edit', edit_statuspagamento_path(statuspagamento) %></td>
+    <td><%= link_to 'Destroy', statuspagamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Statuspagamentoe', new_statuspagamento_path %>

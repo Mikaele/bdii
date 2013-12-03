@@ -7,11 +7,14 @@ class CreatePagamentos < ActiveRecord::Migration
       t.references :formapagamentoe
       t.references :cliente
       t.references :servico
+      t.references :realiza
+
 
       t.timestamps
     end
     add_index :pagamentos, :formapagamentoe_id
     add_index :pagamentos, :cliente_id
     add_index :pagamentos, :servico_id
+    add_index :pagamentos, :realiza_id
   end
 end

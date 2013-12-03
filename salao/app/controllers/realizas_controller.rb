@@ -50,10 +50,12 @@ class RealizasController < ApplicationController
   # POST /realizas.json
   def create
     @realiza = Realiza.new(params[:realiza])
-    @pagamento=Pagamento.new(:servico_id=>@realiza.servico_id,:cliente_id=>@realiza.cliente_id,:valor=>@realiza.servico.preco,
-                             :formapagamentoe_id=>params[:pagamento])
+
     respond_to do |format|
-      if @realiza.save and @pagamento.save
+      if @realiza.save
+        @pagamento=Pagamento.new(:servico_id=>@realiza.servico_id,:cliente_id=>@realiza.cliente_id,:valor=>@realiza.servico.preco,
+                                 :formapagamentoe_id=>params[:pagamento],:realiza_id=>@realiza.id)
+        @pagamento.save
         format.html { redirect_to @realiza, notice: 'Realiza was successfully created.' }
         format.json { render json: @realiza, status: :created, location: @realiza }
       else
@@ -93,23 +95,23 @@ class RealizasController < ApplicationController
   end
 
   def agenda_hoje
-    @realizas = Realiza.where(:data=>Date.today).where(:satatus=>nil)
+    @realizas = Realiza.where(:data=>Date.today).where(:statuspagamento_id=>1).where(:status=>"0")
   end
 
   def confirmar
     @realiza = Realiza.find(params[:id])
-    @realiza.update_attribute(:satatus,true)
+    @realiza.update_attribute(:status,1)
     redirect_to :agenda_hoje
   end
 
   def cancelar
     @realiza = Realiza.find(params[:id])
-    @realiza.update_attribute(:created_at,nil)
+    @realiza.update_attribute(:status,-1)
     redirect_to :agenda_hoje
   end
 
   def servicos_data
-    @realizas = Realiza.where(" data  between ? and ?",params[:data1]["(1i)"]+"-"+params[:data1]["(2i)"]+"-"+params[:data1]["(3i)"],params[:data2]["(1i)"]+"-"+params[:data2]["(2i)"]+"-"+params[:data2]["(3i)"]).where("created_at != 'NULL'").where(:satatus=>true)
+    @realizas = Realiza.where(" data  between ? and ?",params[:data1]["(1i)"]+"-"+params[:data1]["(2i)"]+"-"+params[:data1]["(3i)"],params[:data2]["(1i)"]+"-"+params[:data2]["(2i)"]+"-"+params[:data2]["(3i)"]).where(:status=>"1")
     respond_to do |format|
       format.html {render "index"}
       format.json { render json: @realizas }
@@ -117,11 +119,11 @@ class RealizasController < ApplicationController
   end
 
   def atendimento
-    @reallizou=Realiza.where(:satatus=>true)
+    @reallizou=Realiza.where(:status=>"1")
     @funcionarios=Pessoa.select("usuarios.id,pessoas.nome").joins(:usuario)
   end
    def funcionario_atendeu
-     @reallizou=Realiza.where(:satatus=>true).where(:usuario_id=>params[:funcionario][:usuario_id]).where(" data  between ? and ?",params[:data1]["(1i)"]+"-"+params[:data1]["(2i)"]+"-"+params[:data1]["(3i)"],params[:data2]["(1i)"]+"-"+params[:data2]["(2i)"]+"-"+params[:data2]["(3i)"]).where("created_at != 'NULL'")
+     @reallizou=Realiza.where(:status=>"1").where(:usuario_id=>params[:funcionario][:usuario_id]).where(" data  between ? and ?",params[:data1]["(1i)"]+"-"+params[:data1]["(2i)"]+"-"+params[:data1]["(3i)"],params[:data2]["(1i)"]+"-"+params[:data2]["(2i)"]+"-"+params[:data2]["(3i)"])
 
      @funcionarios=Pessoa.select("usuarios.id,pessoas.nome").joins(:usuario)
    end
