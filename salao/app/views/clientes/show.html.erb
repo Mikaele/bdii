@@ -1,38 +1,40 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Nome:</b>
+<h1 class="text-center">
   <%= @cliente.pessoa.nome %>
-</p>
+</h1>
 
-<p>
+<p class="text-center">
   <b>Aniversario:</b>
   <%= @cliente.aniversario %>
 </p>
-<p>
-<p>
+
+<p class="text-center">
   <b>Endereco:</b>
   <%= @cliente.pessoa.endereco %>
 </p>
-<p>
+
+<p class="text-center">
   <b>Telefone:</b>
   <%= @cliente.pessoa.telefone %>
 </p>
-<p>
+
+<p class="text-center">
   <b>Celular:</b>
   <%= @cliente.pessoa.celular %>
 </p>
 
-<p>
+<p class="text-center">
   <b>Sexo:</b>
   <%= @cliente.sexo %>
 </p>
 
-<p>
+<p class="text-center">
   <b>Obs:</b>
   <%= @cliente.obs %>
 </p>
 
-
-<%= link_to 'Edit', edit_cliente_path(@cliente) %> |
-<%= link_to 'Back', clientes_path %>
+<p class="text-center">
+<%= link_to 'Editar', edit_cliente_path(@cliente), class:"btn btn-warning" %> |
+<%= link_to 'Voltar', clientes_path, class:"btn btn-inverse" %>
+</p>

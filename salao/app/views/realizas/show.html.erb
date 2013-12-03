@@ -1,40 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h1 class="text-center">
+  <%= @realiza.cliente.pessoa.nome %>
+</h1>
+
+<p></p>
+
+<h4 class="text-center">
+  <%= @realiza.servico.nome %>
+</h4>
+
+<p class="text-center">
   <b>Data:</b>
   <%= @realiza.data %>
 </p>
 
-<p>
+<p class="text-center">
   <b>Hora:</b>
   <%= @realiza.hora %>
 </p>
 
-<p>
+<p class="text-center">
   <b>Satatus:</b>
   <%= @realiza.satatus %>
 </p>
 
-<p>
+<p class="text-center">
   <b>Obs:</b>
   <%= @realiza.obs %>
 </p>
 
-<p>
-  <b>Cliente:</b>
-  <%= @realiza.cliente %>
+<p class="text-center">
+<%= link_to 'Editar', edit_realiza_path(@realiza), class:"btn btn-warning" %> |
+<%= link_to 'Voltar', realizas_path, class:"btn btn-inverse" %>
 </p>
-
-<p>
-  <b>Usuario:</b>
-  <%= @realiza.usuario %>
-</p>
-
-<p>
-  <b>Servico:</b>
-  <%= @realiza.servico %>
-</p>
-
-
-<%= link_to 'Edit', edit_realiza_path(@realiza) %> |
-<%= link_to 'Back', realizas_path %>

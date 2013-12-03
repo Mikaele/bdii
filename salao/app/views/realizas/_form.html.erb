@@ -10,44 +10,64 @@
       </ul>
     </div>
   <% end %>
-  <div class="field span12">
-    <%= f.label :data %><br />
-    <%= f.date_select :data %>
-  </div>
-  <div class="field span6">
-    <%= f.label :hora %><br />
-    <%= f.time_select :hora %>
-  </div>
-  <div class="field span3">
-    <%= f.label :satatus %><br />
-    <%= f.text_field :satatus %>
-  </div>
-  <div class="field span4">
-    <%= f.label :obs %><br />
-    <%= f.text_area :obs,:rows=>"10" %>
-  </div>
-  <div class="field span5">
-    <%= f.label :cliente_id %><br />
-    <%= f.collection_select(:cliente_id,@pessoas,:id,:nome) %>
-  </div>
-  <div class="field span5">
-    <%= f.label :usuario_id ,"Profissional" %><br />
-    <%= f.collection_select(:usuario_id,@funcionarios,:id,:nome) %>
 
-  </div>
-  <div class="field span5">
-    <%= f.label :servico_id %><br />
-    <%= f.collection_select(:servico_id,@servicos,:id,:nome) %>
-  </div>
-    <div class="field span5">
-      Forma Pagamento<br/>
-      <select name="pagamento">
-      <% Formapagamentoe.all.each do |p| %>
-      <option value="<%= p.id %>"><%= p.tipo %> </option>
-      <% end %>
-    </select>
-     </div>
-  <div class="actions span9">
-    <%= f.submit %>
-  </div>
+    <form class="form-horizontal">
+
+      <div class="control-group">
+        <label class="control-label">Nome:</label>
+        <div class="controls">
+          <%= f.collection_select(:cliente_id,@pessoas,:id,:nome) %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Serviço:</label>
+        <div class="controls">
+          <%= f.collection_select(:servico_id,@servicos,:id,:nome) %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Data:</label>
+        <div class="controls">
+          <%= f.date_select :data %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Hora:</label>
+        <div class="controls">
+          <%= f.time_select :hora %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Status:</label>
+        <div class="controls">
+          <%= f.text_field :satatus %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Forma de Pagamento:</label>
+        <div class="controls">
+          <select name="pagamento">
+            <% Formapagamentoe.all.each do |p| %>
+                <option value="<%= p.id %>"><%= p.tipo %> </option>
+            <% end %>
+          </select>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <label class="control-label">Obs:</label>
+        <div class="controls">
+          <%= f.text_field :obs %>
+        </div>
+      </div>
+
+      <button class="btn btn-success" type="submit">Salvar</button>
+
+      </form>
+
 <% end %>

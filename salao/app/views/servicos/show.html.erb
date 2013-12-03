@@ -1,25 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Categoria:</b>
-  <%= @servico.category %>
-</p>
-
-<p>
-  <b>Nome:</b>
+<h1 class="text-center">
   <%= @servico.nome %>
+</h1>
+
+<p class="text-center">
+  <b>Categoria:</b>
+  <%= @servico.category.nome %>
 </p>
 
-<p>
-  <b>Preco:</b>
-  <%= @servico.preco %>
+<p class="text-center">
+  <b>Preço:</b>
+  R$ <%= @servico.preco %>
 </p>
 
-<p>
-  <b>Descricao:</b>
+<p class="text-center">
+  <b>Descrição:</b>
   <%= @servico.descricao %>
 </p>
 
-
-<%= link_to 'Edit', edit_servico_path(@servico) %> |
-<%= link_to 'Back', servicos_path %>
+<p class="text-center">
+    <%= link_to 'Editar', edit_servico_path(@servico), class:"btn btn-warning" %> |
+    <%= link_to 'Voltar', servicos_path, class:"btn btn-inverse" %>
+</p>

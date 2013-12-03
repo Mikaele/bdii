@@ -11,23 +11,33 @@
     </div>
   <% end %>
 
+    <form class="form-horizontal">
+
   <div class="field">
-    <%= f.label :category_id %><br />
+    <label class="control-label" for="inputEmail">Categoria:</label>
     <%= f.collection_select(:category_id,Category.all,:id,:nome) %>
   </div>
-  <div class="field">
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
+
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">Nome:</label>
+    <div class="controls">
+        <%= f.text_field :nome, class:"input-xlarge" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :preco %><br />
-    <%= f.text_field :preco %>
+
+  <div class="input-prepend">
+    <label class="control-label" for="inputEmail">Preço:</label>
+    <span class="add-on">R$</span>
+    <%= f.text_field :preco, class:"input-mini" %>
   </div>
-  <div class="field">
-    <%= f.label :descricao %><br />
-    <%= f.text_area :descricao %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">Descrição:</label>
+    <div class="controls">
+        <%= f.text_field :descricao, class:"input-xxlarge" %>
+    </div>
+   </div>
+        <button class="btn btn-success" type="submit">Salvar</button>
+
+        </form>
 <% end %>

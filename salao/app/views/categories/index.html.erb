@@ -1,25 +1,30 @@
-<h1>Listing categories</h1>
+<h1 class="text-center" >Lista das Categorias dos Serviços</h1>
 
-<table class="table">
+<%= link_to 'Nova Categoria', new_category_path, class:"btn" %>
+
+<p></p>
+<table class="table table-hover table-condensed">
+  <thead>
   <tr>
     <th>Nome</th>
-    <th>Descricao</th>
+    <th>Descrição</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
+  </thead>
 
+  <tbody>
 <% @categories.each do |category| %>
   <tr>
     <td><%= category.nome %></td>
     <td><%= category.descricao %></td>
-    <td><%= link_to 'Show', category %></td>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Visualizar', category, class:"btn btn-info" %></td>
+    <td><%= link_to 'Editar', edit_category_path(category), class:"btn btn-warning" %></td>
+    <td><%= link_to 'Apagar', category, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
   </tr>
 <% end %>
+      </tbody>
 </table>
 
 <br />
-
-<%= link_to 'New Category', new_category_path %>
