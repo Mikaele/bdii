@@ -10,25 +10,37 @@
       </ul>
     </div>
   <% end %>
+
+    <form class="form-horizontal">
+
   <div class="span12">
   <% if params[:id] %>
         <%= f.hidden_field :pessoa_id, :value=>params[:id] %>
   <% else %>
  <%end%>
-  <div class="span12">
-    <%= f.label :aniversario %><br />
-    <%= f.date_select :aniversario %>
-  </div>
-  <div class="span3">
-    <%= f.label :sexo %><br />
-    <%= f.select :sexo, ["Feminino","Masculino"] %>
-  </div>
-  <div class="span5">
-    <%= f.label :obs %><br />
-    <%= f.text_area :obs ,:rows=>10%>
-  </div>
+
+  <div class="control-group">
+    <label class="control-label">Data de Aniversário:</label>
+    <div class="control">
+        <%= f.date_select :aniversario %>
     </div>
-  <div class="actions">
-    <%= f.submit :class=>"btn btn-success",:value=>"criar Cliente"%>
   </div>
+
+  <div class="control-group">
+    <label class="control-label">Sexo:</label>
+    <div class="controls">
+        <%= f.select :sexo, ["Feminino","Masculino"] %>
+      </div>
+  </div>
+
+    <div class="control-group">
+      <label class="control-label">Obs:</label>
+      <div class="controls">
+        <%= f.text_field :obs, class:"input-xxlarge" %>
+      </div>
+    </div>
+
+      <button class="btn btn-success" type="submit">Salvar</button>
+      <br /><br />
+    </form>
 <% end %>

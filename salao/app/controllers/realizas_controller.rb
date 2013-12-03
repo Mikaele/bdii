@@ -95,18 +95,18 @@ class RealizasController < ApplicationController
   end
 
   def agenda_hoje
-    @realizas = Realiza.where(:data=>Date.today).where(:statuspagamento_id=>1).where(:status=>"0")
+    @realizas = Realiza.where(:data=>Date.today).where(:satatus=>nil)
   end
 
   def confirmar
     @realiza = Realiza.find(params[:id])
-    @realiza.update_attribute(:status,1)
+    @realiza.update_attribute(:satatus,true)
     redirect_to :agenda_hoje
   end
 
   def cancelar
     @realiza = Realiza.find(params[:id])
-    @realiza.update_attribute(:status,-1)
+    @realiza.update_attribute(:created_at,nil)
     redirect_to :agenda_hoje
   end
 
