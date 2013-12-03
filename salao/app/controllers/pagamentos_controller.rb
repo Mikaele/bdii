@@ -80,4 +80,12 @@ class PagamentosController < ApplicationController
       format.json { head :no_content }
     end
   end
+  def confirmar_pg
+    @pagamento=Pagamento.find(params[:id])
+    @pagamento.update_attributes(:hora=>Time.now,:data=>Date.today)
+    respond_to do |format|
+      format.html { redirect_to "/" }
+      format.json { head :no_content }
+    end
+  end
 end

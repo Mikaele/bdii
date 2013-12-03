@@ -73,7 +73,7 @@
         <td><%= pagamento.cliente.pessoa.nome %></td>
         <td><%= pagamento.servico.nome %></td>
         <td><%= pagamento.created_at.strftime("%d/%m/%Y") %></td>
-        <td><%= link_to 'Edit', edit_pagamento_path(pagamento) %></td>
+        <td><%= link_to 'Efetua Pagamento', "/confirmar_pg/"+pagamento.id.to_s  %></td>
         <td><%= link_to 'Destroy', pagamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% @debito=@debito+pagamento.valor %>
       </tr>

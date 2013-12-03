@@ -43,6 +43,7 @@ Salao::Application.routes.draw do
   match "/atendimento" , :controller=>"realizas" , :action=>"atendimento"
   match "/funcionario_atendeu" , :controller=>"realizas" , :action=>"funcionario_atendeu"
   match "/pesquisar_usuario" , :controller=>"clientes" , :action=>"pesquisar_usuario"
+  match "/confirmar_pg/:id" , :controller=>"pagamentos" , :action=>"confirmar_pg"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
