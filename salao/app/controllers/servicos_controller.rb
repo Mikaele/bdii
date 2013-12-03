@@ -82,4 +82,11 @@ class ServicosController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def relatorio
+    @relatorio=Realiza.select("sum(preco) as valor,servicos.*,realizas.*").joins(:servico).group(:nome).order("nome asc")
+    @categorias= Category.select("nome").order("nome asc")
+    @relatorio1=Realiza.select("sum(preco) as valor,servicos.*,realizas.*").joins("right outer join servicos on servicos.id = servico_id").group(:nome).order("nome asc").where(" data like '%_-#{Date.today.month}-_%'")
+    @relatorio2=Realiza.select("sum(preco) as valor,servicos.*,realizas.*").joins("right outer join servicos on servicos.id = servico_id").group(:nome).order("nome asc").where(:data=>Date.today)
+  end
 end

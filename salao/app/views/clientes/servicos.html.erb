@@ -18,7 +18,7 @@
   <tr>
     <td><%= realiza.data %></td>
     <td><%= realiza.hora %></td>
-    <td><%= realiza.satatus==true ? "Realizado" : "Não realizado" %></td>
+    <td><%= realiza.status=="1" ? "Realizado" : "Não realizado" %></td>
     <td><%= realiza.obs %></td>
     <td><%= realiza.servico.nome %></td>
     <td><%= realiza.servico.preco %></td>
@@ -39,7 +39,6 @@
   <tr>
     <th>Data</th>
     <th>Hora</th>
-    <th>Status</th>
     <th>Obs</th>
     <th>Serviço</th>
     <th>Preço</th>
@@ -51,7 +50,6 @@
       <tr>
         <td><%= realiza.data %></td>
         <td><%= realiza.hora %></td>
-        <td><%= realiza.satatus==true ? "Realizado" : "Não realizado" %></td>
         <td><%= realiza.obs %></td>
         <td><%= realiza.servico.nome %></td>
         <td><%= realiza.servico.preco %></td>

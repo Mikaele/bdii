@@ -1,4 +1,4 @@
-<h1 class="text-center">Todos os Serviços Realizados</h1>
+<h1>Todos os Serviços realizados</h1>
 
 <%= link_to 'Novo serviço', new_realiza_path, class:"btn" %>
 
@@ -34,16 +34,18 @@
   <tr>
     <td><%= realiza.data.strftime("%d/%m/%Y")%></td>
     <td><%= realiza.hora.strftime("%H:%M") %></td>
+    <td><%= realiza.status=="1" ? "Realizado" : "Não realizado" %></td>
+    <td><%= realiza.obs %></td>
     <td><a href="/cliente/servico/<%=realiza.cliente.id%>"><%= realiza.cliente.pessoa.nome %></a></td>
     <td><%= realiza.servico.nome %></td>
     <% if realiza.satatus!=true%>
-        <td><%= realiza.satatus==true ? "Realizado" : "Não realizado" %></td>
-        <td><%= realiza.obs %></td>
         <td><a href="/confirmar/<%=realiza.id %>">Confirmar</a></td>
         <td><a href="/cancelar/<%=realiza.id%>">Cancelar</a></td>
     <td><%= link_to 'Visualizar', realiza, class:"btn btn-info" %></td>
     <td><%= link_to 'Editar', edit_realiza_path(realiza), class:"btn btn-warning" %></td>
     <td><%= link_to 'Apagar', realiza, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
+    <% if realiza.status==0%>
+    
        <%end%>
   </tr>
 <% end %>

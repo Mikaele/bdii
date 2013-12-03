@@ -14,6 +14,7 @@
     <th>Obs</th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
   </thead>
 
@@ -21,12 +22,22 @@
   <% @realizas.each do |realiza| %>
       <tr>
         <td><%= realiza.hora.strftime("%H:%M") %></td>
+        <td><%= realiza.status %></td>
+        <td><%= realiza.obs %></td>
         <td><a href="/cliente/servico/<%=realiza.cliente.id%>"><%= realiza.cliente.pessoa.nome %></a></td>
         <td><%= realiza.servico.nome %></td>
-        <% if realiza.satatus==nil %>
+        <% if realiza.status=="0" %>
         <td><a href="/confirmar/<%=realiza.id%>">Confirmar</a></td>
         <td><a href="/cancelar/<%=realiza.id%>">Cancelar</a></td>
         <% end %>
+        <td>
+        <% if realiza.pagamento.hora %>
+            Pago
+        <% else%>
+            <td><%= link_to 'Efetuar Pagamento', "/confirmar_pg/"+realiza.pagamento.id.to_s  %></td>
+
+        <% end %>
+        </td>
       </tr>
   <% end %>
   </tbody>
