@@ -79,3 +79,63 @@
 </table>
 <hr>
 <h4>Total em debito: <%= @debito %></h4>
+
+<script type="text/javascript" charset="utf-8">
+    $(function () {
+        new Highcharts.Chart({
+            chart: { renderTo: 'orders_chart' ,type: "bar"},
+            title: {
+                text: 'Historico de Faturamento por Serviços'
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: {
+                categories: ["Funcionario","Salão"],
+                title: {
+                    text: null
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Faturamento (R$)',
+                    align: 'high'
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            tooltip: {
+                valueSuffix: 'R$'
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -40,
+                y: 100,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor: '#FFFFFF',
+                shadow: true
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                name: 'Valor',
+                data: ['<%= @valor*0.20%>','<%= @valor%>']
+            }]
+        });
+    });
+</script>
+
+<div id="orders_chart" style="width:auto; height:auto;"></div>
