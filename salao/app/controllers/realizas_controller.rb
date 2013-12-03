@@ -50,9 +50,10 @@ class RealizasController < ApplicationController
   # POST /realizas.json
   def create
     @realiza = Realiza.new(params[:realiza])
-
+    @pagamento=Pagamento.new(:servico_id=>@realiza.servico_id,:cliente_id=>@realiza.cliente_id,:valor=>@realiza.servico.preco,
+                             :formapagamentoe_id=>params[:pagamento])
     respond_to do |format|
-      if @realiza.save
+      if @realiza.save and @pagamento.save
         format.html { redirect_to @realiza, notice: 'Realiza was successfully created.' }
         format.json { render json: @realiza, status: :created, location: @realiza }
       else
@@ -66,9 +67,10 @@ class RealizasController < ApplicationController
   # PUT /realizas/1.json
   def update
     @realiza = Realiza.find(params[:id])
-
+    @pagamento=Pagamento.new(:servico_id=>@realiza.servico_id,:cliente_id=>@realiza.cliente_id,:valor=>@realiza.servico.preco,
+                             :formapagamentoe_id=>params[:pagamento])
     respond_to do |format|
-      if @realiza.update_attributes(params[:realiza])
+      if @realiza.update_attributes(params[:realiza]) and @pagamento.save
         format.html { redirect_to @realiza, notice: 'Realiza was successfully updated.' }
         format.json { head :no_content }
       else

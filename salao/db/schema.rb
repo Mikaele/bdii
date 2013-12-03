@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131129223806) do
+ActiveRecord::Schema.define(:version => 20131202163624) do
 
   create_table "categories", :force => true do |t|
     t.string   "nome"
@@ -28,6 +28,27 @@ ActiveRecord::Schema.define(:version => 20131129223806) do
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
   end
+
+  create_table "formapagamentoes", :force => true do |t|
+    t.string   "tipo"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "pagamentos", :force => true do |t|
+    t.date     "data"
+    t.time     "hora"
+    t.float    "valor"
+    t.integer  "formapagamentoe_id"
+    t.integer  "cliente_id"
+    t.integer  "servico_id"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "pagamentos", ["cliente_id"], :name => "index_pagamentos_on_cliente_id"
+  add_index "pagamentos", ["formapagamentoe_id"], :name => "index_pagamentos_on_formapagamentoe_id"
+  add_index "pagamentos", ["servico_id"], :name => "index_pagamentos_on_servico_id"
 
   create_table "pessoas", :force => true do |t|
     t.string   "nome"
@@ -66,6 +87,12 @@ ActiveRecord::Schema.define(:version => 20131129223806) do
   end
 
   add_index "servicos", ["category_id"], :name => "index_servicos_on_category_id"
+
+  create_table "statuspagamentoes", :force => true do |t|
+    t.string   "tipo"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "usuarios", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

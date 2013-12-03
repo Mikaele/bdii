@@ -98,5 +98,6 @@ class ClientesController < ApplicationController
     @cliente = Cliente.find(params[:id])
     @servicos=Realiza.where(:cliente_id=>@cliente.id)
     @cancelados=Realiza.where(:cliente_id=>@cliente.id).where("created_at = 'NULL'")
+    @pagamentosOk=Pagamento.where(:cliente_id=>@cliente.id).where(:data=>nil)
   end
 end

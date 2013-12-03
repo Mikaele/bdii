@@ -23,7 +23,8 @@
 <% end %>
 </table>
 <hr>
-<p><b>Total consumo: <%=@valor%></b></p>
+<p><b>Total em consumo: R$<%= @valor%></b></p>
+<p><b>Porcentagem funcionário: R$<%= @valor*0.20%></b></p>
    <hr>
 <h1>Serviços cancelados</h1>
 <table class="table">
@@ -47,3 +48,36 @@
       </tr>
   <% end %>
 </table>
+
+<h1>Pagamentos pendentes</h1>
+<% @debito=0 %>
+<table class="table">
+  <tr>
+    <th>Data</th>
+    <th>Hora</th>
+    <th>Valor</th>
+    <th>Formapagamentoe</th>
+    <th>Cliente</th>
+    <th>Servico</th>
+    <th>Criado em</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @pagamentosOk.each do |pagamento| %>
+      <tr>
+        <td><%= pagamento.data ? pagamento.data.strftime("%d/%m/%Y") :"" %></td>
+        <td><%= pagamento.hora ? pagamento.hora.strftime("%H:%M"):"" %></td>
+        <td><%= pagamento.valor %></td>
+        <td><%= pagamento.formapagamentoe.tipo%></td>
+        <td><%= pagamento.cliente.pessoa.nome %></td>
+        <td><%= pagamento.servico.nome %></td>
+        <td><%= pagamento.created_at.strftime("%d/%m/%Y") %></td>
+        <td><%= link_to 'Edit', edit_pagamento_path(pagamento) %></td>
+        <td><%= link_to 'Destroy', pagamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% @debito=@debito+pagamento.valor %>
+      </tr>
+  <% end %>
+</table>
+<hr>
+<h4>Total em debito: <%= @debito %></h4>

@@ -1,4 +1,13 @@
 Salao::Application.routes.draw do
+  resources :pagamentos
+
+
+  resources :statuspagamentoes
+
+
+  resources :formapagamentoes
+
+
   resources :categories
 
 

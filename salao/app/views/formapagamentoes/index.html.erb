@@ -1,0 +1,23 @@
+<h1>Listing formapagamentoes</h1>
+
+<table>
+  <tr>
+    <th>Tipo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @formapagamentoes.each do |formapagamento| %>
+  <tr>
+    <td><%= formapagamento.tipo %></td>
+    <td><%= link_to 'Show', formapagamento %></td>
+    <td><%= link_to 'Edit', edit_formapagamento_path(formapagamento) %></td>
+    <td><%= link_to 'Destroy', formapagamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Formapagamentoe', new_formapagamento_path %>

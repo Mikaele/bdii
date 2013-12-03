@@ -1,0 +1,31 @@
+<h1>Pagamentos</h1>
+
+<table class="table">
+  <tr>
+    <th>Data</th>
+    <th>Hora</th>
+    <th>Valor</th>
+    <th>Formapagamentoe</th>
+    <th>Cliente</th>
+    <th>Servico</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pagamentos.each do |pagamento| %>
+  <tr>
+    <td><%= pagamento.data %></td>
+    <td><%= pagamento.hora %></td>
+    <td><%= pagamento.valor %></td>
+    <td><%= pagamento.formapagamentoe.tipo%></td>
+    <td><%= pagamento.cliente.pessoa.nome %></td>
+    <td><%= pagamento.servico.nome %></td>
+    <td><%= link_to 'Edit', edit_pagamento_path(pagamento) %></td>
+    <td><%= link_to 'Destroy', pagamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pagamento', new_pagamento_path %>

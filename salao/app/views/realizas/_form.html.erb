@@ -38,8 +38,15 @@
   <div class="field span5">
     <%= f.label :servico_id %><br />
     <%= f.collection_select(:servico_id,@servicos,:id,:nome) %>
-
   </div>
+    <div class="field span5">
+      Forma Pagamento<br/>
+      <select name="pagamento">
+      <% Formapagamentoe.all.each do |p| %>
+      <option value="<%= p.id %>"><%= p.tipo %> </option>
+      <% end %>
+    </select>
+     </div>
   <div class="actions span9">
     <%= f.submit %>
   </div>
