@@ -1,5 +1,14 @@
 <p id="notice"><%= notice %></p>
 
+<h1 class="text-center">
+  <%= @pagamento.cliente %>
+</h1>
+
+<p class="text-center">
+  <b>Servico:</b>
+  <%= @pagamento.servico %>
+</p>
+
 <p>
   <b>Data:</b>
   <%= @pagamento.data %>
@@ -20,16 +29,5 @@
   <%= @pagamento.formapagamentoe %>
 </p>
 
-<p>
-  <b>Cliente:</b>
-  <%= @pagamento.cliente %>
-</p>
-
-<p>
-  <b>Servico:</b>
-  <%= @pagamento.servico %>
-</p>
-
-
-<%= link_to 'Edit', edit_pagamento_path(@pagamento) %> |
-<%= link_to 'Back', pagamentos_path %>
+<%= link_to 'Editar', edit_pagamento_path(@pagamento), class:"btn btn-warning" %> |
+<%= link_to 'Voltar', pagamentos_path,class:"btn btn-inverse" %>

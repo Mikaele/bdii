@@ -13,11 +13,11 @@
   <%@valor=0%>
   <thead>
   <tr>
-    <th>Data</th>
-    <th>Hora</th>
-    <th>Obs</th>
-    <th>Cliente</th>
-    <th>Usuario</th>
+    <th>DATA</th>
+    <th>HORA</th>
+    <th>CLIENTE</th>
+    <th>FUNCIONÁRIO</th>
+    <th>OBS</th>
   </tr>
   </thead>
 
@@ -26,10 +26,10 @@
       <tr>
         <td><%= realiza.data.strftime("%d/%m/%Y")%></td>
         <td><%= realiza.hora.strftime("%H:%M") %></td>
-        <td><%= realiza.obs %></td>
         <td><a href="/cliente/servico/<%=realiza.cliente.id%>"><%= realiza.cliente.pessoa.nome %></a></td>
         <td><%= realiza.usuario.pessoa.nome %></td>
         <td><%= realiza.servico.nome %></td>
+        <td><%= realiza.obs %></td>
         <%@valor=@valor+realiza.servico.preco%>
       </tr>
   <% end %>

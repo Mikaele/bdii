@@ -1,31 +1,37 @@
-<h1>Pagamentos</h1>
+<h1 class="text-center">Pagamentos</h1>
 
-<table class="table">
+<%= link_to 'Novo Pagamento', new_pagamento_path, class:"btn" %>
+
+<p></p>
+
+<table class="table table-hover table-condensed">
+  <thead>
   <tr>
-    <th>Data</th>
-    <th>Hora</th>
-    <th>Valor</th>
-    <th>Formapagamentoe</th>
-    <th>Cliente</th>
-    <th>Servico</th>
+    <th>DATA</th>
+    <th>HORA</th>
+    <th>CLIENTE</th>
+    <th>SERVIÇO</th>
+    <th>VALOR</th>
+    <th>FORMA DE PAGAMENTO</th>
     <th></th>
     <th></th>
   </tr>
+  </thead>
 
+  <tbody>
 <% @pagamentos.each do |pagamento| %>
   <tr>
-    <td><%= pagamento.data %></td>
-    <td><%= pagamento.hora %></td>
-    <td><%= pagamento.valor %></td>
-    <td><%= pagamento.formapagamentoe.tipo%></td>
+    <td><%= pagamento.data.strftime("%d/%m/%Y") %></td>
+    <td><%= pagamento.hora.strftime("%H:%M") %></td>
     <td><%= pagamento.cliente.pessoa.nome %></td>
     <td><%= pagamento.servico.nome %></td>
-    <td><%= link_to 'Edit', edit_pagamento_path(pagamento) %></td>
-    <td><%= link_to 'Destroy', pagamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= pagamento.valor %></td>
+    <td><%= pagamento.formapagamentoe.tipo%></td>
+    <td><%= link_to 'Editar', edit_pagamento_path(pagamento), class:"btn btn-warning" %></td>
+    <td><%= link_to 'Apagar', pagamento, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
   </tr>
 <% end %>
+    </tbody>
 </table>
 
 <br />
-
-<%= link_to 'New Pagamento', new_pagamento_path %>
