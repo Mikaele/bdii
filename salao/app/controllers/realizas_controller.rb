@@ -95,18 +95,18 @@ class RealizasController < ApplicationController
   end
 
   def agenda_hoje
-    @realizas = Realiza.where(:data=>Date.today).where(:satatus=>nil)
+    @realizas = Realiza.where(:data=>Date.today).where(:statuspagamento_id=>1).where(:status=>"0")
   end
 
   def confirmar
     @realiza = Realiza.find(params[:id])
-    @realiza.update_attribute(:satatus,true)
+    @realiza.update_attribute(:status,"1")
     redirect_to :agenda_hoje
   end
 
   def cancelar
     @realiza = Realiza.find(params[:id])
-    @realiza.update_attribute(:created_at,nil)
+    @realiza.update_attribute(:status,"-1")
     redirect_to :agenda_hoje
   end
 
@@ -122,9 +122,9 @@ class RealizasController < ApplicationController
     @reallizou=Realiza.where(:status=>"1")
     @funcionarios=Pessoa.select("usuarios.id,pessoas.nome").joins(:usuario)
   end
-   def funcionario_atendeu
-     @reallizou=Realiza.where(:status=>"1").where(:usuario_id=>params[:funcionario][:usuario_id]).where(" data  between ? and ?",params[:data1]["(1i)"]+"-"+params[:data1]["(2i)"]+"-"+params[:data1]["(3i)"],params[:data2]["(1i)"]+"-"+params[:data2]["(2i)"]+"-"+params[:data2]["(3i)"])
+  def funcionario_atendeu
+    @reallizou=Realiza.where(:status=>"1").where(:usuario_id=>params[:funcionario][:usuario_id]).where(" data  between ? and ?",params[:data1]["(1i)"]+"-"+params[:data1]["(2i)"]+"-"+params[:data1]["(3i)"],params[:data2]["(1i)"]+"-"+params[:data2]["(2i)"]+"-"+params[:data2]["(3i)"])
 
-     @funcionarios=Pessoa.select("usuarios.id,pessoas.nome").joins(:usuario)
-   end
+    @funcionarios=Pessoa.select("usuarios.id,pessoas.nome").joins(:usuario)
+  end
 end

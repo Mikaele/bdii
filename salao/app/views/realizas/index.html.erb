@@ -1,53 +1,48 @@
 <h1>Todos os Serviços realizados</h1>
 
-<%= link_to 'Novo serviço', new_realiza_path, class:"btn" %>
-
 <h3>Pesquisar por data</h3>
 <form action="/servicos_data" method="post">
-  Data Inicial:
-    <%= date_select"data1","" %>
+  Data inicial
+  <%= date_select"data1","" %>
   <br>
-  Data Final:
-    <%= date_select"data2","" %>
-  <input type="submit" class="btn" value="Pesquisar">
+  Data final
+  <%= date_select"data2","" %>
+  <input type="submit" value="Pesqusar">
 </form>
 
-<table class="table table-hover table-condensed">
-  <thead>
+<table class="table">
   <tr>
     <th>Data</th>
     <th>Hora</th>
-    <th>Cliente</th>
-    <th>Serviço</th>
-    <th>Status</th>
+    <th>Satatus</th>
     <th>Obs</th>
-    <th></th>
+    <th>Cliente</th>
+    <th>Servico</th>
     <th></th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
-  </thead>
 
-  <tbody>
-<% @realizas.each do |realiza| %>
-  <tr>
-    <td><%= realiza.data.strftime("%d/%m/%Y")%></td>
-    <td><%= realiza.hora.strftime("%H:%M") %></td>
-    <td><%= realiza.status=="1" ? "Realizado" : "Não realizado" %></td>
-    <td><%= realiza.obs %></td>
-    <td><a href="/cliente/servico/<%=realiza.cliente.id%>"><%= realiza.cliente.pessoa.nome %></a></td>
-    <td><%= realiza.servico.nome %></td>
-    <% if realiza.satatus!=true%>
-        <td><a href="/confirmar/<%=realiza.id %>">Confirmar</a></td>
-        <td><a href="/cancelar/<%=realiza.id%>">Cancelar</a></td>
-    <td><%= link_to 'Visualizar', realiza, class:"btn btn-info" %></td>
-    <td><%= link_to 'Editar', edit_realiza_path(realiza), class:"btn btn-warning" %></td>
-    <td><%= link_to 'Apagar', realiza, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
-    <% if realiza.status==0%>
-    
-       <%end%>
-  </tr>
-<% end %>
-      </tbody>
+  <% @realizas.each do |realiza| %>
+      <tr>
+        <td><%= realiza.data.strftime("%d/%m/%Y")%></td>
+        <td><%= realiza.hora.strftime("%H:%M") %></td>
+        <td><%= realiza.status=="1" ? "Realizado" : "Não realizado" %></td>
+        <td><%= realiza.obs %></td>
+        <td><a href="/cliente/servico/<%=realiza.cliente.id%>"><%= realiza.cliente.pessoa.nome %></a></td>
+        <td><%= realiza.servico.nome %></td>
+        <% if realiza.status==0%>
+            <td><%= link_to 'Show', realiza %></td>
+            <td><%= link_to 'Edit', edit_realiza_path(realiza) %></td>
+            <td><%= link_to 'Destroy', realiza, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><a href="/confirmar/<%=realiza.id%>">Confirmar</a></td>
+            <td><a href="/cancelar/<%=realiza.id%>">Cancelar</a></td>
+        <%end%>
+      </tr>
+  <% end %>
 </table>
+
+<br />
+
+<%= link_to 'Novo serviço', new_realiza_path %>
