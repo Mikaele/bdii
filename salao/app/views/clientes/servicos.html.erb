@@ -1,27 +1,29 @@
-<h2 class="text-center"><b><%= @cliente.pessoa.nome %></b> realizou os serviços abaixo:</h2>
+<h2 class="text-center"><%= @cliente.pessoa.nome %></h2>
   <%@valor =0%>
+
+<h3 >Serviços Realizados</h3>
 
 <table class="table table-hover table-condensed">
   <thead>
   <tr>
     <th>Data</th>
     <th>Hora</th>
-    <th>Status</th>
-    <th>Obs</th>
     <th>Serviço</th>
     <th>Preço</th>
+    <th>Status</th>
+    <th>Obs</th>
   </tr>
   </thead>
 
   <tbody>
 <% @servicos.each do |realiza| %>
   <tr>
-    <td><%= realiza.data %></td>
-    <td><%= realiza.hora %></td>
-    <td><%= realiza.status=="1" ? "Realizado" : "Não realizado" %></td>
-    <td><%= realiza.obs %></td>
+    <td><%= realiza.data.strftime("%d/%m/%Y") %></td>
+    <td><%= realiza.hora.strftime("%H:%M") %></td>
     <td><%= realiza.servico.nome %></td>
     <td><%= realiza.servico.preco %></td>
+    <td><%= realiza.status=="1" ? "Realizado" : "Não realizado" %></td>
+    <td><%= realiza.obs %></td>
     <%@valor=@valor+realiza.servico.preco %>
   </tr>
 <% end %>
@@ -33,42 +35,42 @@
 <p><b>Porcentagem funcionário: R$<%= @valor*0.20%></b></p>
    <hr>
 
-<h2 class="text-center">Serviços Cancelados</h2>
+<h3 >Serviços Cancelados</h3>
 <table class="table table-hover table-condensed">
   <thead>
   <tr>
     <th>Data</th>
     <th>Hora</th>
-    <th>Obs</th>
     <th>Serviço</th>
     <th>Preço</th>
+    <th>Obs</th>
   </tr>
   </thead>
 
   <tbody>
   <% @cancelados.each do |realiza| %>
       <tr>
-        <td><%= realiza.data %></td>
-        <td><%= realiza.hora %></td>
-        <td><%= realiza.obs %></td>
+        <td><%= realiza.data.strftime("%d/%m/%Y") %></td>
+        <td><%= realiza.hora.strftime("%H:%M") %></td>
         <td><%= realiza.servico.nome %></td>
         <td><%= realiza.servico.preco %></td>
+        <td><%= realiza.obs %></td>
       </tr>
   <% end %>
   </tbody>
 </table>
 
-<h2 class="text-center">Pagamentos Pendentes</h2>
+<h3>Pagamentos Pendentes</h3>
 <% @debito=0 %>
 <table class="table table-hover table-condensed">
   <thead>
   <tr>
     <th>Data</th>
     <th>Hora</th>
-    <th>Valor</th>
-    <th>Forma de Pagamento</th>
     <th>Cliente</th>
     <th>Serviço</th>
+    <th>Valor</th>
+    <th>Forma de Pagamento</th>
     <th>Criado em</th>
     <th></th>
     <th></th>
@@ -80,10 +82,10 @@
       <tr>
         <td><%= pagamento.data ? pagamento.data.strftime("%d/%m/%Y") :"" %></td>
         <td><%= pagamento.hora ? pagamento.hora.strftime("%H:%M"):"" %></td>
-        <td><%= pagamento.valor %></td>
-        <td><%= pagamento.formapagamentoe.tipo%></td>
         <td><%= pagamento.cliente.pessoa.nome %></td>
         <td><%= pagamento.servico.nome %></td>
+        <td><%= pagamento.valor %></td>
+        <td><%= pagamento.formapagamentoe.tipo%></td>
         <td><%= pagamento.created_at.strftime("%d/%m/%Y") %></td>
         <td><%= link_to 'Efetuar Pagamento', "/confirmar_pg/"+pagamento.id.to_s, class:"btn btn-success"  %></td>
         <td><%= link_to 'Apagar', pagamento, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
@@ -93,7 +95,7 @@
   </tbody>
 </table>
 <hr>
-<h4>Total em debito: <%= @debito %></h4>
+<p><b>Total em debito: <%= @debito %></b></p>
 
 <script type="text/javascript" charset="utf-8">
     $(function () {

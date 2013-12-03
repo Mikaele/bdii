@@ -1,23 +1,27 @@
-<h1>Listing formapagamentoes</h1>
+<h1 class="text-center">Lista das Formas de Pagamento</h1>
 
-<table>
+<%= link_to 'Nova Forma de Pagamento', new_formapagamento_path, class:"btn" %>
+
+<table class="table table-hover table-condensed">
+  <thead>
   <tr>
     <th>Tipo</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
+  </thead>
 
+  <tbody>
 <% @formapagamentoes.each do |formapagamento| %>
   <tr>
     <td><%= formapagamento.tipo %></td>
-    <td><%= link_to 'Show', formapagamento %></td>
-    <td><%= link_to 'Edit', edit_formapagamento_path(formapagamento) %></td>
-    <td><%= link_to 'Destroy', formapagamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Visualizar', formapagamento, class:"btn btn-info" %></td>
+    <td><%= link_to 'Editar', edit_formapagamento_path(formapagamento), class:"btn btn-info" %></td>
+    <td><%= link_to 'Apagar', formapagamento, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-info" %></td>
   </tr>
 <% end %>
+  </tbody>
 </table>
 
 <br />
-
-<%= link_to 'New Formapagamentoe', new_formapagamento_path %>

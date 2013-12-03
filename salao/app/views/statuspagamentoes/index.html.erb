@@ -1,23 +1,27 @@
-<h1>Listing statuspagamentoes</h1>
+<h1 class="text-center">Lista dos Status dos Pagamentos</h1>
 
-<table>
+<%= link_to 'Novo Status do Pagamento', new_statuspagamento_path %>
+
+<table class="table table-hover table-condensed">
+  <thead>
   <tr>
     <th>Tipo</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
+  </thead>
 
+  <tbody>
 <% @statuspagamentoes.each do |statuspagamento| %>
   <tr>
     <td><%= statuspagamento.tipo %></td>
-    <td><%= link_to 'Show', statuspagamento %></td>
-    <td><%= link_to 'Edit', edit_statuspagamento_path(statuspagamento) %></td>
-    <td><%= link_to 'Destroy', statuspagamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Visualizar', statuspagamento, class:"btn btn-info" %></td>
+    <td><%= link_to 'Editar', edit_statuspagamento_path(statuspagamento), class:"btn btn-warning" %></td>
+    <td><%= link_to 'Apagar', statuspagamento, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger" %></td>
   </tr>
 <% end %>
+  </tbody>
 </table>
 
 <br />
-
-<%= link_to 'New Statuspagamentoe', new_statuspagamento_path %>

@@ -1,4 +1,4 @@
-<h1 class="text-center">Aniversariantes do mês </h1>
+<h1 class="text-center">Aniversariantes do Mês </h1>
 
 <%= link_to 'Novo Cliente', new_cliente_path, class:"btn" %>
 
@@ -6,8 +6,9 @@
 <table class="table table-hover table-condensed">
   <thead>
   <tr>
+    <th>Dia</th>
     <th>Cliente</th>
-    <th>Aniversario</th>
+    <th>Email</th>
     <th>Sexo</th>
     <th>Obs</th>
   </tr>
@@ -16,8 +17,9 @@
   <tbody>
 <% @clientes.each do |cliente| %>
   <tr>
+    <td><%= cliente.aniversario.strftime("%d") %></td>
     <td><%= cliente.pessoa.nome %></td>
-    <td><%= cliente.aniversario %></td>
+    <td><%= cliente.pessoa.email %></td>
     <td><%= cliente.sexo %></td>
     <td><%= cliente.obs %></td>
   </tr>

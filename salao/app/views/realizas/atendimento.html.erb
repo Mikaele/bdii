@@ -1,6 +1,6 @@
-<h1 class="text-center">Atendimentos Realizados no dia</h1>
+<h1 class="text-center">Atendimentos Realizados</h1>
 <form  action="/funcionario_atendeu" method="post">
-  Pesquisar por funcionario <%= collection_select("funcionario",:usuario_id,@funcionarios,:id,:nome) %>
+  Pesquisar por funcionario: <%= collection_select("funcionario",:usuario_id,@funcionarios,:id,:nome) %>
   <br>
   Data Inicial:
   <%= date_select"data1","" %>
@@ -35,4 +35,4 @@
   <% end %>
   </tbody>
 </table>
-<h4>Valor Total Entrada Dia: R$<%=@valor%></h4>
+<h4>Valor Total das Entrada: R$<%=@valor%></h4>
