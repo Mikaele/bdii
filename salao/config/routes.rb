@@ -28,10 +28,13 @@ Salao::Application.routes.draw do
 
   devise_for :usuarios
   authenticated :usuarios do
-    root :to => "pessoas#show"
+    root :to => "realizas#agenda_hoje"
   end
 
-  match "/" ,:controller=>"realizas" , :action=>"agenda_hoje"
+  root :to => "index#index"
+
+
+  match "/" ,:controller=>"index" , :action=>"index"
   match "/cadastrar_cliente/passo1", :controller=>"index"  , :action=>"cadastrar_cliente"
   match "/cadastrar_cliente/passo2/:id", :controller=>"index"  , :action=>"cadastrar_cliente2"
   match "/aniversariente_cliente" , :controller=>"clientes" , :action=>"aniversariante"
