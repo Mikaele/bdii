@@ -1,0 +1,62 @@
+<script type="text/javascript" charset="utf-8">
+    $(function () {
+        new Highcharts.Chart({
+            chart: { renderTo: 'orders_chart' ,type: "column"},
+            title: {
+                text: 'Produtividade dos Funcionarios'
+            },
+            subtitle: {
+                text: ''
+            },
+            xAxis: {
+                categories: <%= raw @prod.map(&:nome) %>,
+                title: {
+                    text: 'Funcionarios'
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Faturamento (R$)',
+                    align: 'high'
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            tooltip: {
+                valueSuffix: 'R$'
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: true
+                    }
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                x: -40,
+                y: 100,
+                floating: true,
+                borderWidth: 1,
+                backgroundColor: '#FFFFFF',
+                shadow: true
+            },
+            credits: {
+                enabled: false
+            },
+            series: [{
+                name: 'Total',
+                data: <%= raw @prod.map(&:valor)%>
+            }, {
+                name: 'Mês atual',
+                data: <%= raw @relatorio1.map(&:valor)%>
+            }]
+        });
+    });
+</script>
+
+<div id="orders_chart" style="width:auto; height:auto;"></div>

@@ -89,4 +89,9 @@ class ServicosController < ApplicationController
     @relatorio1=Realiza.select("sum(preco) as valor,servicos.*,realizas.*").joins("right outer join servicos on servicos.id = servico_id").group(:nome).order("nome asc").where(" data like '%_-#{Date.today.month}-_%'")
     @relatorio2=Realiza.select("sum(preco) as valor,servicos.*,realizas.*").joins("right outer join servicos on servicos.id = servico_id").group(:nome).order("nome asc").where(:data=>Date.today)
   end
+  def produtividade
+    @prod=Realiza.select("sum(preco) as valor,usuarios.*,realizas.*").joins(:usuario,:servico).group(:nome).order("nome asc")
+    @relatorio1=Realiza.select("sum(preco) as valor,usuarios.*,realizas.*").joins(:usuario,:servico).group(:nome).order("nome asc").where(" data like '%_-#{Date.today.month}-_%'")
+    @relatorio2=Realiza.select("sum(preco) as valor,usuarios.*,realizas.*").joins(:usuario,:servico).group(:nome).order("nome asc").where(:data=>Date.today)
+  end
 end
