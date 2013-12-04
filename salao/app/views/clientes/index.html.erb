@@ -6,7 +6,7 @@
 
     <div class="input-append">
       <form action="/pesquisar_usuario" method="post">
-        <input name="nome" type="text" placeholder="Pesquisar por Nome:">
+        <input name="nome" type="text" placeholder="Pesquisar por Nome...">
         <button class="btn" type="submit">Pesquisar</button>
       </form>
     </div>
@@ -14,11 +14,12 @@
 <table class="table table-hover table-condensed">
   <thead>
   <tr>
-    <th>Nome</th>
-    <th>Telefone</th>
-    <th>Celular</th>
-    <th>Sexo</th>
-    <th>Obs</th>
+    <th>NOME</th>
+    <th>TELEFONE</th>
+    <th>CELULAR</th>
+    <th>EMAIL</th>
+    <th>SEXO</th>
+    <th>OBS</th>
     <th></th>
     <th></th>
     <th></th>
@@ -31,6 +32,7 @@
     <td><a href="/cliente/servico/<%=cliente.id%>"><%= cliente.pessoa.nome %></a></td>
     <td><%= cliente.pessoa.telefone %></td>
     <td><%= cliente.pessoa.celular %></td>
+    <td><%= cliente.pessoa.email %></td>
     <td><%= cliente.sexo %></td>
     <td><%= cliente.obs %></td>
     <td><%= link_to 'Visualizar', cliente, class:"btn btn-info" %></td>

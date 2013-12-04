@@ -15,6 +15,11 @@
     color: #FFFFFF !important;
 }
 
-.row-fluid {
-
+th {
+    background-color: #881F17;
+    color: #FFFFFF;
+    text-align: center !important;
+}
+td {
+    text-align: center !important;
 }

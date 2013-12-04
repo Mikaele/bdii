@@ -1,24 +1,30 @@
-<h1>Agenda do Dia</h1>
-<table class="table">
+<h1 class="text-center">Agenda do Dia</h1>
+
+<%= link_to 'Agendar', new_realiza_path, class:"btn" %>
+
+<p></p>
+<table class="table table-hover table-condensed">
+  <thead>
   <tr>
-    <th>Hora</th>
-    <th>Satatus</th>
-    <th>Obs</th>
-    <th>Cliente</th>
-    <th>Usuario</th>
-    <th>Servico</th>
+    <th>HORA</th>
+    <th>CLIENTE</th>
+    <th>SERVIÇO</th>
+    <th>STATUS</th>
+    <th>OBS</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
+  </thead>
 
+  <tbody>
   <% @realizas.each do |realiza| %>
       <tr>
         <td><%= realiza.hora.strftime("%H:%M") %></td>
-        <td><%= realiza.status %></td>
-        <td><%= realiza.obs %></td>
         <td><a href="/cliente/servico/<%=realiza.cliente.id%>"><%= realiza.cliente.pessoa.nome %></a></td>
         <td><%= realiza.servico.nome %></td>
+        <td><%= realiza.status %></td>
+        <td><%= realiza.obs %></td>
         <% if realiza.status=="0" %>
             <td><a href="/confirmar/<%=realiza.id%>">Confirmar</a></td>
             <td><a href="/cancelar/<%=realiza.id%>">Cancelar</a></td>
@@ -33,8 +39,9 @@
         </td>
       </tr>
   <% end %>
+  </tbody>
 </table>
 
 <br />
 
-<%= link_to 'Agendar', new_realiza_path %>
+
